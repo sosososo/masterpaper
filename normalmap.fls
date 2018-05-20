@@ -1,0 +1,5 @@
+PWD C:/Users/90549/Desktop/бшнд/nju-thesis-master/chapters
+INPUT c:/texlive/2017/texmf-var/web2c/xetex/xelatex.fmt
+INPUT ./normalmap.tex
+OUTPUT normalmap.log
+OUTPUT normalmap.xdv

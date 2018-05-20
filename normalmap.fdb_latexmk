@@ -1,0 +1,12 @@
+# Fdb version 3
+["xdvipdfmx"] 1526048777 "normalmap.xdv" "normalmap.pdf" "normalmap" 1526048778
+  "normalmap.xdv" 1526048776 5180 c8bee4a71f52ba363738eb8a8574411a "xelatex"
+  (generated)
+  "normalmap.pdf"
+["xelatex"] 1526048776 "normalmap.tex" "normalmap.xdv" "normalmap" 1526048778
+  "c:/texlive/2017/texmf-var/web2c/xetex/xelatex.fmt" 1524992938 3678315 788f67f2cd879729874c22932a32eaa0 ""
+  "normalmap.aux" 1526048431 10498 4820418756f35ef0c227740fa877f990 ""
+  "normalmap.tex" 1526048774 37467 52c0395521d11b96e301688fd1f94257 ""
+  (generated)
+  "normalmap.log"
+  "normalmap.xdv"

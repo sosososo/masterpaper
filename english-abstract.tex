@@ -1,0 +1,31 @@
+% 论文的英文摘要
+\begin{englishabstract}
+
+With the continuous development of computer vision and machine learning, it has brought remarkable achievements.
+In the field of computer vision and machine learning, object detection is a very classical and basic subject, while defect detection is a very important application field of it. For example, int the production of parts for automobile, airplane and spacecraft, once the defective part is missed to be noticed,
+ it would be returned in the assemble of more advanced equipment,
+ some companies will make a claim for it. Furthermore, those parts that has not been discovered  will make a malfunction, induce users' danger and cause economic loss. 
+
+The traditional object detection algorithm is usually divided into two steps. First, the features in the image are extracted, then the classifier with the fratures as input is used to classify the image. There are two main disadvantages, one of them is the difficulty of feature engineering, another is the performance of model is susceptible to the parts' texture, lighting, noise, and other conditions.
+With the vigorous development of deep learning, more and more different detection models have been developed to detect defection, which have achieved ideal results in many fields, especially in competitions. However, the defection is always too small for most of parts, the deep neural network would not lead to a good outputs due to the high level's abstraction of input images.
+
+To solve this problem, this paper takes the normal map as input for the first time, and do the defect detecion with traditional methods include SVM, Adaboost adn Cascade get a state-of-the-art performance. We also take the normal map as input as convolutional neural network.
+The main work and innovation of this article could be find as follows.
+
+\begin{enumerate}
+\item We design an equipment to acquire the normal map. The existing normal map acquisition scheme is mainly based on two models: scanner or camera. There are two important issues of those models, it only can get the color information and the normal map is not stabilize. We design a new hardware which could lead to a accurate and stabilize normal map with our algorithm. And we put forward a model to compute the normal map with the information collected by our hardware maintained above. In this compution model, we make some coorections and enhancements before the compution such as color correction, distortion calibration and light compensation to make up the imperfection of the capture equipment.
+\item Also, we has experiment on the traditional object detection methods with our extracted normal maps. We extract many diffierent features form the normal map such as haar-like, LBP, GLCM, HOG and others, 
+and use those features as the model's input, and combine those features according to the model's outputs. 
+Furthermore, considering rareness of defections on the parts,
+we try a variety of ways to make data augment, considering the imbalance of data between the parts with defections and those without defection, we divide the dataset into some  subdatasets, for each subdatasets, we use the Adaboost method to train a more powerful classifier with the base learner of SVM, then use Cascade to combine those classifier to do defect detection.
+\item At last, we make some experiments with deep learning model, we also do some analysises on the results and performance of this model compared with traditional methods' output.
+\end{enumerate}
+
+
+
+
+
+
+% 英文关键词。关键词之间用英文半角逗号隔开，末尾无符号。
+\englishkeywords{Normal maps, Defect detection, SVM,Deep learning}
+\end{englishabstract}

@@ -1,0 +1,71 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/W32TeX)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: MG1533047.aux
+The style file: gbt7714-2005.bst
+A level-1 auxiliary file: abstract.aux
+A level-1 auxiliary file: english-abstract.aux
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: normalmap.aux
+A level-1 auxiliary file: traditional-method.aux
+A level-1 auxiliary file: deeplearning-method.aux
+A level-1 auxiliary file: summary.aux
+A level-1 auxiliary file: thanks.aux
+A level-1 auxiliary file: resume.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: grepaper.bib.bib
+Repeated entry---line 553 of file grepaper.bib.bib
+ : @book{zarria.net
+ :                 ,
+I'm skipping whatever remains of this entry
+Warning--Require booktitle: szegedy2015going
+Warning--Require address: macadam1970sources
+Warning--Require year: zarria.net
+Warning--Require address: russ2016image
+Warning--Require address: 周志华2016机器学习
+Warning--Require journal: canny1983finding
+Warning--Require citedate: DBLP:journals/corr/AbadiABBCCCDDDG16
+Warning--Require journal: paszke2017automatic
+You've used 67 entries,
+            3107 wiz_defined-function locations,
+            1082 strings with 17886 characters,
+and the built_in function-call counts, 107754 in all, are:
+= -- 11639
+> -- 217
+< -- 501
++ -- 9052
+- -- 741
+* -- 3019
+:= -- 11736
+add.period$ -- 0
+call.type$ -- 67
+change.case$ -- 300
+chr.to.int$ -- 0
+cite$ -- 75
+duplicate$ -- 15299
+empty$ -- 4493
+format.name$ -- 600
+if$ -- 28773
+int.to.chr$ -- 0
+int.to.str$ -- 67
+missing$ -- 0
+newline$ -- 228
+num.names$ -- 67
+pop$ -- 1614
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1070
+stack$ -- 0
+substring$ -- 12732
+swap$ -- 3040
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 8
+while$ -- 1485
+width$ -- 69
+write$ -- 861
+(There was 1 error message)

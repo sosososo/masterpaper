@@ -1,0 +1,12 @@
+# Fdb version 3
+["xdvipdfmx"] 0 "english-abstract.xdv" "english-abstract.pdf" "english-abstract" 0
+  "english-abstract.xdv" 0 -1 0 "xelatex"
+  (generated)
+  "english-abstract.pdf"
+["xelatex"] 1525679091 "english-abstract.tex" "english-abstract.xdv" "english-abstract" 1525679092
+  "c:/texlive/2017/texmf-var/web2c/xetex/xelatex.fmt" 1524992938 3678315 788f67f2cd879729874c22932a32eaa0 ""
+  "english-abstract.aux" 1525659260 2082 cd9a6f4c5397bc61010085b7811a8be5 ""
+  "english-abstract.tex" 1525679090 246 1ee0b00108c78b397ce4808f51c6e679 ""
+  (generated)
+  "english-abstract.log"
+  "english-abstract.xdv"

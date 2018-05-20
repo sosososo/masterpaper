@@ -1,0 +1,462 @@
+\begin{thebibliography}{10}
+\providecommand{\bibauthor}[1]{#1}
+\providecommand{\bibeditor}[1]{#1}
+\providecommand{\bibtranslator}[1]{#1}
+\providecommand{\bibtitle}[1]{#1}
+\providecommand{\bibbooktitle}[1]{#1}
+\providecommand{\bibjournal}[1]{#1}
+\providecommand{\bibmark}[1]{#1}
+\providecommand{\bibcountry}[1]{#1}
+\providecommand{\bibpatentid}[1]{#1}
+\providecommand{\bibedition}[1]{#1}
+\providecommand{\biborganization}[1]{#1}
+\providecommand{\bibaddress}[1]{#1}
+\providecommand{\bibpublisher}[1]{#1}
+\providecommand{\bibinstitution}[1]{#1}
+\providecommand{\bibschool}[1]{#1}
+\providecommand{\bibvolume}[1]{#1}
+\providecommand{\bibnumber}[1]{#1}
+\providecommand{\bibversion}[1]{#1}
+\providecommand{\bibpages}[1]{#1}
+\providecommand{\bibmodifydate}[1]{#1}
+\providecommand{\bibcitedate}[1]{#1}
+\providecommand{\bibyear}[1]{#1}
+\providecommand{\bibdate}[1]{#1}
+\providecommand{\biburl}[1]{\newline\url{#1}}
+
+\bibitem{dalal2005histograms}
+\bibauthor{DALAL N\@, TRIGGS B}\@. \bibtitle{Histograms of oriented gradients
+  for human detection}\bibmark{[C]} //\thinspace{}\bibbooktitle{Computer Vision
+  and Pattern Recognition, 2005. CVPR 2005. IEEE Computer Society Conference
+  on\thinspace{}\textnormal{: }Vol~1}\@.
+  \bibyear{2005}\thinspace{}\textnormal{:
+  }\bibpages{886\thinspace{}\textnormal{--}\thinspace{}893}\@.
+
+\bibitem{ojala2000gray}
+\bibauthor{OJALA T\@, PIETIK{\"A}INEN M\@, M{\"A}ENP{\"A}{\"A} T}\@.
+  \bibtitle{Gray scale and rotation invariant texture classification with local
+  binary patterns}\bibmark{[C]} //\thinspace{}\bibbooktitle{European Conference
+  on Computer Vision}\@. \bibyear{2000}\thinspace{}\textnormal{:
+  }\bibpages{404\thinspace{}\textnormal{--}\thinspace{}420}\@.
+
+\bibitem{haralick1973textural}
+\bibauthor{HARALICK R~M\@, SHANMUGAM K\@, OTHERS}\@. \bibtitle{Textural
+  features for image classification}\bibmark{[J]}\@. \bibjournal{IEEE
+  Transactions on systems, man, and cybernetics}\@,
+  \bibyear{1973}\bibnumber{(6)}\thinspace{}\textnormal{:
+  }\bibpages{610\thinspace{}\textnormal{--}\thinspace{}621}\@.
+
+\bibitem{rublee2011orb}
+\bibauthor{RUBLEE E\@, RABAUD V\@, KONOLIGE K, et~al}\@. \bibtitle{ORB: An
+  efficient alternative to SIFT or SURF}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Computer Vision (ICCV), 2011 IEEE international
+  conference on}\@. \bibyear{2011}\thinspace{}\textnormal{:
+  }\bibpages{2564\thinspace{}\textnormal{--}\thinspace{}2571}\@.
+
+\bibitem{viola2001rapid}
+\bibauthor{VIOLA P\@, JONES M}\@. \bibtitle{Rapid object detection using a
+  boosted cascade of simple features}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Computer Vision and Pattern Recognition, 2001.
+  CVPR 2001. Proceedings of the 2001 IEEE Computer Society Conference
+  on\thinspace{}\textnormal{: }Vol~1}\@.
+  \bibyear{2001}\thinspace{}\textnormal{:
+  }\bibpages{I\thinspace{}\textnormal{--}\thinspace{}I}\@.
+
+\bibitem{hearst1998support}
+\bibauthor{HEARST M~A\@, DUMAIS S~T\@, OSUNA E, et~al}\@. \bibtitle{Support
+  vector machines}\bibmark{[J]}\@. \bibjournal{IEEE Intelligent Systems and
+  their applications}\@, \bibyear{1998}\@,
+  \bibvolume{13}\bibnumber{(4)}\thinspace{}\textnormal{:
+  }\bibpages{18\thinspace{}\textnormal{--}\thinspace{}28}\@.
+
+\bibitem{felzenszwalb2010object}
+\bibauthor{FELZENSZWALB P~F\@, GIRSHICK R~B\@, MCALLESTER D, et~al}\@.
+  \bibtitle{Object detection with discriminatively trained part-based
+  models}\bibmark{[J]}\@. \bibjournal{IEEE transactions on pattern analysis and
+  machine intelligence}\@, \bibyear{2010}\@,
+  \bibvolume{32}\bibnumber{(9)}\thinspace{}\textnormal{:
+  }\bibpages{1627\thinspace{}\textnormal{--}\thinspace{}1645}\@.
+
+\bibitem{lecun1998gradient}
+\bibauthor{LECUN Y\@, BOTTOU L\@, BENGIO Y, et~al}\@. \bibtitle{Gradient-based
+  learning applied to document recognition}\bibmark{[J]}\@.
+  \bibjournal{Proceedings of the IEEE}\@, \bibyear{1998}\@,
+  \bibvolume{86}\bibnumber{(11)}\thinspace{}\textnormal{:
+  }\bibpages{2278\thinspace{}\textnormal{--}\thinspace{}2324}\@.
+
+\bibitem{krizhevsky2012imagenet}
+\bibauthor{KRIZHEVSKY A\@, SUTSKEVER I\@, HINTON G~E}\@. \bibtitle{Imagenet
+  classification with deep convolutional neural networks}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Advances in neural information processing
+  systems}\@. \bibyear{2012}\thinspace{}\textnormal{:
+  }\bibpages{1097\thinspace{}\textnormal{--}\thinspace{}1105}\@.
+
+\bibitem{simonyan2014very}
+\bibauthor{SIMONYAN K\@, ZISSERMAN A}\@. \bibtitle{Very deep convolutional
+  networks for large-scale image recognition}\bibmark{[J]}\@. \bibjournal{arXiv
+  preprint arXiv:1409.1556}\@, \bibyear{2014}\@.
+
+\bibitem{szegedy2015going}
+\bibauthor{SZEGEDY C\@, LIU W\@, JIA Y, et~al}\@. \bibtitle{Going deeper with
+  convolutions}\bibmark{[C]} //\thinspace{}\@. \bibyear{2015}\@.
+
+\bibitem{he2016deep}
+\bibauthor{HE K\@, ZHANG X\@, REN S, et~al}\@. \bibtitle{Deep residual learning
+  for image recognition}\bibmark{[C]} //\thinspace{}\bibbooktitle{Proceedings
+  of the IEEE conference on computer vision and pattern recognition}\@.
+  \bibyear{2016}\thinspace{}\textnormal{:
+  }\bibpages{770\thinspace{}\textnormal{--}\thinspace{}778}\@.
+
+\bibitem{girshick2014rich}
+\bibauthor{GIRSHICK R\@, DONAHUE J\@, DARRELL T, et~al}\@. \bibtitle{Rich
+  feature hierarchies for accurate object detection and semantic
+  segmentation}\bibmark{[C]} //\thinspace{}\bibbooktitle{Proceedings of the
+  IEEE conference on computer vision and pattern recognition}\@.
+  \bibyear{2014}\thinspace{}\textnormal{:
+  }\bibpages{580\thinspace{}\textnormal{--}\thinspace{}587}\@.
+
+\bibitem{girshick2015fast}
+\bibauthor{GIRSHICK R}\@. \bibtitle{Fast r-cnn}\bibmark{[J]}\@.
+  \bibjournal{arXiv preprint arXiv:1504.08083}\@, \bibyear{2015}\@.
+
+\bibitem{ren2015faster}
+\bibauthor{REN S\@, HE K\@, GIRSHICK R, et~al}\@. \bibtitle{Faster r-cnn:
+  Towards real-time object detection with region proposal
+  networks}\bibmark{[C]} //\thinspace{}\bibbooktitle{Advances in neural
+  information processing systems}\@. \bibyear{2015}\thinspace{}\textnormal{:
+  }\bibpages{91\thinspace{}\textnormal{--}\thinspace{}99}\@.
+
+\bibitem{he2017mask}
+\bibauthor{HE K\@, GKIOXARI G\@, DOLL{\'A}R P, et~al}\@. \bibtitle{Mask
+  r-cnn}\bibmark{[C]} //\thinspace{}\bibbooktitle{Computer Vision (ICCV), 2017
+  IEEE International Conference on}\@. \bibyear{2017}\thinspace{}\textnormal{:
+  }\bibpages{2980\thinspace{}\textnormal{--}\thinspace{}2988}\@.
+
+\bibitem{dai2016r}
+\bibauthor{DAI J\@, LI Y\@, HE K, et~al}\@. \bibtitle{R-fcn: Object detection
+  via region-based fully convolutional networks}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Advances in neural information processing
+  systems}\@. \bibyear{2016}\thinspace{}\textnormal{:
+  }\bibpages{379\thinspace{}\textnormal{--}\thinspace{}387}\@.
+
+\bibitem{redmon2016you}
+\bibauthor{REDMON J\@, DIVVALA S\@, GIRSHICK R, et~al}\@. \bibtitle{You only
+  look once: Unified, real-time object detection}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the IEEE conference on computer
+  vision and pattern recognition}\@. \bibyear{2016}\thinspace{}\textnormal{:
+  }\bibpages{779\thinspace{}\textnormal{--}\thinspace{}788}\@.
+
+\bibitem{redmon2016yolo9000}
+\bibauthor{REDMON J\@, FARHADI A}\@. \bibtitle{YOLO9000: Better, Faster,
+  Stronger}\bibmark{[J]}\@. \bibjournal{arXiv preprint arXiv:1612.08242}\@,
+  \bibyear{2016}\@.
+
+\bibitem{yolov3}
+\bibauthor{REDMON J\@, FARHADI A}\@. \bibtitle{YOLOv3: An Incremental
+  Improvement}\bibmark{[J]}\@. \bibjournal{arXiv}\@, \bibyear{2018}\@.
+
+\bibitem{liu2016ssd}
+\bibauthor{LIU W\@, ANGUELOV D\@, ERHAN D, et~al}\@. \bibtitle{Ssd: Single shot
+  multibox detector}\bibmark{[C]} //\thinspace{}\bibbooktitle{European
+  conference on computer vision}\@. \bibyear{2016}\thinspace{}\textnormal{:
+  }\bibpages{21\thinspace{}\textnormal{--}\thinspace{}37}\@.
+
+\bibitem{fu2017dssd}
+\bibauthor{FU C-Y\@, LIU W\@, RANGA A, et~al}\@. \bibtitle{DSSD:
+  Deconvolutional single shot detector}\bibmark{[J]}\@. \bibjournal{arXiv
+  preprint arXiv:1701.06659}\@, \bibyear{2017}\@.
+
+\bibitem{10.1007/978-3-642-37149-3_38}
+\bibauthor{LI X\@, WU J}\@. \bibtitle{Improved Gray World Algorithm Based on
+  Salient Detection}\bibmark{[C]} //\thinspace{}\bibeditor{TAN T\@, RUAN Q\@,
+  CHEN X, et~al}\@. \bibbooktitle{Advances in Image and Graphics
+  Technologies}\@. \bibaddress{Berlin, Heidelberg}\thinspace{}\textnormal{:
+  }\bibpublisher{Springer Berlin Heidelberg}\@,
+  \bibyear{2013}\thinspace{}\textnormal{:
+  }\bibpages{315\thinspace{}\textnormal{--}\thinspace{}321}\@.
+
+\bibitem{lam2005combining}
+\bibauthor{LAM E~Y}\@. \bibtitle{Combining gray world and retinex theory for
+  automatic white balance in digital photography}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Consumer Electronics, 2005.(ISCE 2005).
+  Proceedings of the Ninth International Symposium on}\@.
+  \bibyear{2005}\thinspace{}\textnormal{:
+  }\bibpages{134\thinspace{}\textnormal{--}\thinspace{}139}\@.
+
+\bibitem{weng2005novel}
+\bibauthor{WENG C-C\@, CHEN H\@, FUH C-S}\@. \bibtitle{A novel automatic white
+  balance method for digital still cameras}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Circuits and Systems, 2005. ISCAS 2005. IEEE
+  International Symposium on}\@. \bibyear{2005}\thinspace{}\textnormal{:
+  }\bibpages{3801\thinspace{}\textnormal{--}\thinspace{}3804}\@.
+
+\bibitem{macadam1970sources}
+\bibauthor{MACADAM D~L}\@. \bibbooktitle{Sources of color
+  science}\bibmark{[M]}\@. \bibaddress{[S.l.]}\thinspace{}\textnormal{:
+  }\bibpublisher{Mit Press}\@, \bibyear{1970}\@.
+
+\bibitem{porikli2003inter}
+\bibauthor{PORIKLI F}\@. \bibtitle{Inter-camera color calibration by
+  correlation model function}\bibmark{[C]} //\thinspace{}\bibbooktitle{Image
+  Processing, 2003. ICIP 2003. Proceedings. 2003 International Conference
+  on\thinspace{}\textnormal{: }Vol~2}\@.
+  \bibyear{2003}\thinspace{}\textnormal{:
+  }\bibpages{II\thinspace{}\textnormal{--}\thinspace{}133}\@.
+
+\bibitem{yu2009color}
+\bibauthor{YU H\@, WANG J\@, YIN H-R}\@. \bibtitle{Color cast removal based on
+  fitting gray-axis}\bibmark{[C]} //\thinspace{}\bibbooktitle{Machine Learning
+  and Cybernetics, 2009 International Conference on\thinspace{}\textnormal{:
+  }Vol~4}\@. \bibyear{2009}\thinspace{}\textnormal{:
+  }\bibpages{2394\thinspace{}\textnormal{--}\thinspace{}2397}\@.
+
+\bibitem{zhang2000flexible}
+\bibauthor{ZHANG Z}\@. \bibtitle{A flexible new technique for camera
+  calibration}\bibmark{[J]}\@. \bibjournal{IEEE Transactions on pattern
+  analysis and machine intelligence}\@, \bibyear{2000}\@,
+  \bibvolume{22}\bibnumber{(11)}\thinspace{}\textnormal{:
+  }\bibpages{1330\thinspace{}\textnormal{--}\thinspace{}1334}\@.
+
+\bibitem{weng1992camera}
+\bibauthor{WENG J\@, COHEN P\@, HERNIOU M, et~al}\@. \bibtitle{Camera
+  calibration with distortion models and accuracy evaluation}\bibmark{[J]}\@.
+  \bibjournal{IEEE Transactions on pattern analysis and machine
+  intelligence}\@, \bibyear{1992}\@,
+  \bibvolume{14}\bibnumber{(10)}\thinspace{}\textnormal{:
+  }\bibpages{965\thinspace{}\textnormal{--}\thinspace{}980}\@.
+
+\bibitem{heikkila1997four}
+\bibauthor{HEIKKILA J\@, SILVEN O}\@. \bibtitle{A four-step camera calibration
+  procedure with implicit image correction}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Computer Vision and Pattern Recognition, 1997.
+  Proceedings., 1997 IEEE Computer Society Conference on}\@.
+  \bibyear{1997}\thinspace{}\textnormal{:
+  }\bibpages{1106\thinspace{}\textnormal{--}\thinspace{}1112}\@.
+
+\bibitem{贾灵芝2008基于自适应光线补偿的人脸检测算法}
+\bibauthor{贾灵芝\@, 李岚\@, 钱坤喜}\@.
+  \bibtitle{基于自适应光线补偿的人脸检测算法}\bibmark{[J]}\@.
+  \bibjournal{计算机技术与发展}\@, \bibyear{2008}\@,
+  \bibvolume{18}\bibnumber{(12)}\thinspace{}\textnormal{:
+  }\bibpages{120\thinspace{}\textnormal{--}\thinspace{}122}\@.
+
+\bibitem{chen2006illumination}
+\bibauthor{CHEN W\@, ER M~J\@, WU S}\@. \bibtitle{Illumination compensation and
+  normalization for robust face recognition using discrete cosine transform in
+  logarithm domain}\bibmark{[J]}\@. \bibjournal{IEEE Transactions on Systems,
+  Man, and Cybernetics, Part B (Cybernetics)}\@, \bibyear{2006}\@,
+  \bibvolume{36}\bibnumber{(2)}\thinspace{}\textnormal{:
+  }\bibpages{458\thinspace{}\textnormal{--}\thinspace{}466}\@.
+
+\bibitem{ruiz2008illumination}
+\bibauthor{Ruiz-del SOLAR J\@, QUINTEROS J}\@. \bibtitle{Illumination
+  compensation and normalization in eigenspace-based face recognition: A
+  comparative study of different pre-processing approaches}\bibmark{[J]}\@.
+  \bibjournal{Pattern Recognition Letters}\@, \bibyear{2008}\@,
+  \bibvolume{29}\bibnumber{(14)}\thinspace{}\textnormal{:
+  }\bibpages{1966\thinspace{}\textnormal{--}\thinspace{}1979}\@.
+
+\bibitem{malassiotis2005robust}
+\bibauthor{MALASSIOTIS S\@, STRINTZIS M~G}\@. \bibtitle{Robust face recognition
+  using 2D and 3D data: Pose and illumination compensation}\bibmark{[J]}\@.
+  \bibjournal{Pattern Recognition}\@, \bibyear{2005}\@,
+  \bibvolume{38}\bibnumber{(12)}\thinspace{}\textnormal{:
+  }\bibpages{2537\thinspace{}\textnormal{--}\thinspace{}2548}\@.
+
+\bibitem{zheng2008intra}
+\bibauthor{ZHENG Y\@, YIN P\@, ESCODA O~D, et~al}\@. \bibtitle{Intra prediction
+  using template matching with adaptive illumination compensation}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Image Processing, 2008. ICIP 2008. 15th IEEE
+  International Conference on}\@. \bibyear{2008}\thinspace{}\textnormal{:
+  }\bibpages{125\thinspace{}\textnormal{--}\thinspace{}128}\@.
+
+\bibitem{wiegand2003overview}
+\bibauthor{WIEGAND T\@, SULLIVAN G~J\@, BJONTEGAARD G, et~al}\@.
+  \bibtitle{Overview of the H. 264/AVC video coding standard}\bibmark{[J]}\@.
+  \bibjournal{IEEE Transactions on circuits and systems for video
+  technology}\@, \bibyear{2003}\@,
+  \bibvolume{13}\bibnumber{(7)}\thinspace{}\textnormal{:
+  }\bibpages{560\thinspace{}\textnormal{--}\thinspace{}576}\@.
+
+\bibitem{tan2006intra}
+\bibauthor{TAN T~K\@, BOON C~S\@, SUZUKI Y}\@. \bibtitle{Intra prediction by
+  template matching}\bibmark{[C]} //\thinspace{}\bibbooktitle{Image Processing,
+  2006 IEEE International Conference on}\@.
+  \bibyear{2006}\thinspace{}\textnormal{:
+  }\bibpages{1693\thinspace{}\textnormal{--}\thinspace{}1696}\@.
+
+\bibitem{tan2007intra}
+\bibauthor{TAN T~K\@, BOON C~S\@, SUZUKI Y}\@. \bibtitle{Intra prediction by
+  averaged template matching predictors}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Consumer Communications and Networking
+  Conference, 2007. CCNC 2007. 4th IEEE}\@.
+  \bibyear{2007}\thinspace{}\textnormal{:
+  }\bibpages{405\thinspace{}\textnormal{--}\thinspace{}409}\@.
+
+\bibitem{zarria.net}
+\bibauthor{CLARK R}\@. \bibbooktitle{Normal Map Photography}\bibmark{[M]}\@.
+  \@.
+
+\bibitem{opencv_library}
+\bibauthor{BRADSKI G}\@. \bibtitle{{The OpenCV Library}}\bibmark{[J]}\@.
+  \bibjournal{Dr. Dobb's Journal of Software Tools}\@, \bibyear{2000}\@.
+
+\bibitem{MATLAB:2017}
+\bibbooktitle{MATLAB version 9.3.0.681905 (R2015b)}\bibmark{[K]}\@.
+  \bibyear{2017}\@.
+
+\bibitem{russ2016image}
+\bibauthor{RUSS J~C}\@. \bibbooktitle{The image processing
+  handbook}\bibmark{[M]}\@. \bibaddress{[S.l.]}\thinspace{}\textnormal{:
+  }\bibpublisher{CRC press}\@, \bibyear{2016}\@.
+
+\bibitem{ojala2002multiresolution}
+\bibauthor{OJALA T\@, PIETIKAINEN M\@, MAENPAA T}\@. \bibtitle{Multiresolution
+  gray-scale and rotation invariant texture classification with local binary
+  patterns}\bibmark{[J]}\@. \bibjournal{IEEE Transactions on pattern analysis
+  and machine intelligence}\@, \bibyear{2002}\@,
+  \bibvolume{24}\bibnumber{(7)}\thinspace{}\textnormal{:
+  }\bibpages{971\thinspace{}\textnormal{--}\thinspace{}987}\@.
+
+\bibitem{breiman2001random}
+\bibauthor{BREIMAN L}\@. \bibtitle{Random forests}\bibmark{[J]}\@.
+  \bibjournal{Machine learning}\@, \bibyear{2001}\@,
+  \bibvolume{45}\bibnumber{(1)}\thinspace{}\textnormal{:
+  }\bibpages{5\thinspace{}\textnormal{--}\thinspace{}32}\@.
+
+\bibitem{周志华2016机器学习}
+\bibauthor{周志华}\@. \bibbooktitle{机器学习}\bibmark{[M]}\@.
+  \bibaddress{[S.l.]}\thinspace{}\textnormal{: }\bibpublisher{Qing hua da xue
+  chu ban she}\@, \bibyear{2016}\@.
+
+\bibitem{CC01a}
+\bibauthor{CHANG C-C\@, LIN C-J}\@. \bibtitle{{LIBSVM}: A library for support
+  vector machines}\bibmark{[J]}\@. \bibjournal{ACM Transactions on Intelligent
+  Systems and Technology}\@, \bibyear{2011}\@,
+  \bibvolume{2}\thinspace{}\textnormal{:
+  }\bibpages{27:1\thinspace{}\textnormal{--}\thinspace{}27:27}\@.
+
+\bibitem{canny1983finding}
+\bibauthor{CANNY J~F}\@. \bibtitle{Finding edges and lines in
+  images}\bibmark{[J]}\@, \bibyear{1983}\@.
+
+\bibitem{chechik1998synaptic}
+\bibauthor{CHECHIK G\@, MEILIJSON I\@, RUPPIN E}\@. \bibtitle{Synaptic pruning
+  in development: a computational account}\bibmark{[J]}\@. \bibjournal{Neural
+  computation}\@, \bibyear{1998}\@,
+  \bibvolume{10}\bibnumber{(7)}\thinspace{}\textnormal{:
+  }\bibpages{1759\thinspace{}\textnormal{--}\thinspace{}1777}\@.
+
+\bibitem{魏秀参解析卷积神经网络}
+\bibauthor{魏秀参}\@.
+  \bibbooktitle{解析卷积神经网络}\bibmark{[M]}\@. \bibyear{2017}\@.
+
+\bibitem{ioffe2015batch}
+\bibauthor{IOFFE S\@, SZEGEDY C}\@. \bibtitle{Batch normalization: Accelerating
+  deep network training by reducing internal covariate shift}\bibmark{[J]}\@.
+  \bibjournal{arXiv preprint arXiv:1502.03167}\@, \bibyear{2015}\@.
+
+\bibitem{nair2010rectified}
+\bibauthor{NAIR V\@, HINTON G~E}\@. \bibtitle{Rectified linear units improve
+  restricted boltzmann machines}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the 27th international conference
+  on machine learning (ICML-10)}\@. \bibyear{2010}\thinspace{}\textnormal{:
+  }\bibpages{807\thinspace{}\textnormal{--}\thinspace{}814}\@.
+
+\bibitem{he2015delving}
+\bibauthor{HE K\@, ZHANG X\@, REN S, et~al}\@. \bibtitle{Delving deep into
+  rectifiers: Surpassing human-level performance on imagenet
+  classification}\bibmark{[C]} //\thinspace{}\bibbooktitle{Proceedings of the
+  IEEE international conference on computer vision}\@.
+  \bibyear{2015}\thinspace{}\textnormal{:
+  }\bibpages{1026\thinspace{}\textnormal{--}\thinspace{}1034}\@.
+
+\bibitem{qian1999momentum}
+\bibauthor{QIAN N}\@. \bibtitle{On the momentum term in gradient descent
+  learning algorithms}\bibmark{[J]}\@. \bibjournal{Neural networks}\@,
+  \bibyear{1999}\@, \bibvolume{12}\bibnumber{(1)}\thinspace{}\textnormal{:
+  }\bibpages{145\thinspace{}\textnormal{--}\thinspace{}151}\@.
+
+\bibitem{hinton2012neural}
+\bibauthor{HINTON G}\@. \bibtitle{Neural Networks for Machine Learning,
+  Coursera}\bibmark{[J]}\@. \bibjournal{URL: http://coursera.
+  org/course/neuralnets}\@, \bibyear{2012}\@.
+
+\bibitem{kingma2014adam}
+\bibauthor{KINGMA D~P\@, BA J}\@. \bibtitle{Adam: A method for stochastic
+  optimization}\bibmark{[J]}\@. \bibjournal{arXiv preprint arXiv:1412.6980}\@,
+  \bibyear{2014}\@.
+
+\bibitem{谷元保2005一种基于灰度世界模型自动白平衡方法}
+\bibauthor{谷元保\@, 付宇卓}\@.
+  \bibtitle{一种基于灰度世界模型自动白平衡方法}\bibmark{[J]}\@.
+  \bibjournal{计算机仿真}\@, \bibyear{2005}\@,
+  \bibvolume{22}\bibnumber{(9)}\thinspace{}\textnormal{:
+  }\bibpages{185\thinspace{}\textnormal{--}\thinspace{}188}\@.
+
+\bibitem{徐晓昭2010改进灰度世界颜色校正算法}
+\bibauthor{徐晓昭\@, 蔡轶珩\@, 刘晓民, et~al}\@.
+  \bibtitle{改进灰度世界颜色校正算法}\bibmark{[J]}\@.
+  \bibjournal{光子学报}\@, \bibyear{2010}\@,
+  \bibvolume{39}\bibnumber{(3)}\thinspace{}\textnormal{:
+  }\bibpages{559\thinspace{}\textnormal{--}\thinspace{}564}\@.
+
+\bibitem{tsai2010histogram}
+\bibauthor{TSAI G}\@. \bibtitle{Histogram of oriented
+  gradients}\bibmark{[J]}\@. \bibjournal{University of Michigan}\@,
+  \bibyear{2010}\@, \bibvolume{1}\bibnumber{(1)}\thinspace{}\textnormal{:
+  }\bibpages{1\thinspace{}\textnormal{--}\thinspace{}17}\@.
+
+\bibitem{pietikainen2010local}
+\bibauthor{PIETIK{\"A}INEN M}\@. \bibtitle{Local binary
+  patterns}\bibmark{[J]}\@. \bibjournal{Scholarpedia}\@, \bibyear{2010}\@,
+  \bibvolume{5}\bibnumber{(3)}\thinspace{}\textnormal{: }\bibpages{9775}\@.
+
+\bibitem{freund1997decision}
+\bibauthor{FREUND Y\@, SCHAPIRE R~E}\@. \bibtitle{A decision-theoretic
+  generalization of on-line learning and an application to
+  boosting}\bibmark{[J]}\@. \bibjournal{Journal of computer and system
+  sciences}\@, \bibyear{1997}\@,
+  \bibvolume{55}\bibnumber{(1)}\thinspace{}\textnormal{:
+  }\bibpages{119\thinspace{}\textnormal{--}\thinspace{}139}\@.
+
+\bibitem{viola2004robust}
+\bibauthor{VIOLA P\@, JONES M~J}\@. \bibtitle{Robust real-time face
+  detection}\bibmark{[J]}\@. \bibjournal{International journal of computer
+  vision}\@, \bibyear{2004}\@,
+  \bibvolume{57}\bibnumber{(2)}\thinspace{}\textnormal{:
+  }\bibpages{137\thinspace{}\textnormal{--}\thinspace{}154}\@.
+
+\bibitem{DBLP:journals/corr/AbadiABBCCCDDDG16}
+\bibauthor{ABADI M\@, AGARWAL A\@, BARHAM P, et~al}\@. \bibtitle{TensorFlow:
+  Large-Scale Machine Learning on Heterogeneous Distributed
+  Systems}\bibmark{[J/OL]}\@. \bibjournal{CoRR}\@, \bibyear{2016}\@,
+  \bibvolume{abs/1603.04467}\@.
+  \newline\url{http://arxiv.org/abs/1603.04467}\@.
+
+\bibitem{hinton2006reducing}
+\bibauthor{HINTON G~E\@, SALAKHUTDINOV R~R}\@. \bibtitle{Reducing the
+  dimensionality of data with neural networks}\bibmark{[J]}\@.
+  \bibjournal{science}\@, \bibyear{2006}\@,
+  \bibvolume{313}\bibnumber{(5786)}\thinspace{}\textnormal{:
+  }\bibpages{504\thinspace{}\textnormal{--}\thinspace{}507}\@.
+
+\bibitem{paszke2017automatic}
+\bibauthor{PASZKE A\@, GROSS S\@, CHINTALA S, et~al}\@. \bibtitle{Automatic
+  differentiation in PyTorch}\bibmark{[J]}\@, \bibyear{2017}\@.
+
+\bibitem{bengio2013deep}
+\bibauthor{BENGIO Y}\@. \bibtitle{Deep learning of representations: Looking
+  forward}\bibmark{[C]} //\thinspace{}\bibbooktitle{International Conference on
+  Statistical Language and Speech Processing}\@.
+  \bibyear{2013}\thinspace{}\textnormal{:
+  }\bibpages{1\thinspace{}\textnormal{--}\thinspace{}37}\@.
+
+\bibitem{ngiam2011multimodal}
+\bibauthor{NGIAM J\@, KHOSLA A\@, KIM M, et~al}\@. \bibtitle{Multimodal deep
+  learning}\bibmark{[C]} //\thinspace{}\bibbooktitle{Proceedings of the 28th
+  international conference on machine learning (ICML-11)}\@.
+  \bibyear{2011}\thinspace{}\textnormal{:
+  }\bibpages{689\thinspace{}\textnormal{--}\thinspace{}696}\@.
+
+\end{thebibliography}
