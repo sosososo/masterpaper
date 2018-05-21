@@ -451,7 +451,7 @@ OUTPUT introduction.aux
 INPUT introduction.tex
 INPUT introduction.tex
 INPUT figures/changguilingjian.png
-INPUT figures/chuantongjiancebuzhou.PNG
+INPUT figures/chuantongjiance.jpg
 OUTPUT normalmap.aux
 INPUT normalmap.tex
 INPUT normalmap.tex
@@ -532,6 +532,10 @@ INPUT c:/texlive/2017/texmf-dist/fonts/tfm/public/txfonts/txexa.tfm
 INPUT figures/tanh.png
 INPUT figures/relu.png
 INPUT figures/VGG.png
+INPUT figures/vgg11.png
+INPUT figures/vgg13.png
+INPUT figures/vgg16.png
+INPUT figures/vgg19.png
 OUTPUT summary.aux
 INPUT summary.tex
 INPUT summary.tex

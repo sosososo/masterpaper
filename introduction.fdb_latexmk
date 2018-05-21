@@ -3,10 +3,10 @@
   "introduction.xdv" 0 -1 0 "xelatex"
   (generated)
   "introduction.pdf"
-["xelatex"] 1525658973 "introduction.tex" "introduction.xdv" "introduction" 1525658974
+["xelatex"] 1526903332 "introduction.tex" "introduction.xdv" "introduction" 1526903333
   "c:/texlive/2017/texmf-var/web2c/xetex/xelatex.fmt" 1524992938 3678315 788f67f2cd879729874c22932a32eaa0 ""
-  "introduction.aux" 1525658695 5660 2bca2a94d9619475f77689f097625619 ""
-  "introduction.tex" 1525658971 16114 ffb29a829d696904f8b73c69515b6a38 ""
+  "introduction.aux" 1526903253 5227 f752bb4f53693d1f1bbbfd491f6e3ab1 ""
+  "introduction.tex" 1526903331 13702 3f6cb81a5e5d30bf604b927c3339379d ""
   (generated)
-  "introduction.log"
   "introduction.xdv"
+  "introduction.log"

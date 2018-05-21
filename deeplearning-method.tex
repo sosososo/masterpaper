@@ -300,17 +300,155 @@ $Dropout$在向前传播时对神经元以一定的概率随机失活，这种�
 \section{实验结果和分析}
 
 本节将展示使用本章算法进行缺陷检测得到的结果，并将其与传统算法进行对比。
-实验使用的深度学习框架是Pytorch，
-该框架是深度学习中常用的框架之一，它能够支持多种平台，现已被广泛应用于学术界和工业界中。
-
+本文实验环境系统为ubuntu 16.04，
+使用的
+torch版本为0.3.1，
+torchvision版本为0.1.9。
+实验计算机CPU为1颗12核 Inter(R) Core(TM) i7-5820k @ 3.30GHz处理器，
+GPU为Tesla K40c，显存大小为11439M。
 同基于传统方法的缺陷检测算法一样，
 我们使用
 召回率（$REC$）、
 查准率（$PRE$）、
 漏检率（ $MDR$）、
 误检率（$FDR$）
-作为模型评价标准，
-，其结果如表\ref{tab:shenduxuexijieguo}所示。我们发现，本章算法的实验结果并不比使用HOG、Gredient和RGB联合特征训练出来的传统模型的结果好，我们认为最主要的原因有两点：首先在VGG-11中，输入数据的大小为$224\times 224$，虽然这是原始数据放大之后的结果，但由于缺陷目标往往较小，在这样的输入中，缺陷目标所占比例很小，而模型网络又比较深，使得缺陷区域的特征在最后的特征层中占比更小；其次，受限于缺陷零件数据量，模型容易过拟合。
+作为模型评价标准。
+
+
+本文将法线图作为输入，
+输入的大小为$224\times224$，
+$mini-batch$的大小设置为48，
+在训练的时候每轮读入数据时随机打乱数据的顺序，
+Adam方法中的学习率设为0.001，
+$\beta_1$设置为0.9，
+$\beta_2$设置为0.999。
+数据集划分方式同基于传统检测时的划分方法一样。
+在进行迭代优化参数时，
+我们使用TensorboardX可视化训练过程，
+在使用训练集训练时，每10轮记录一次loss。
+我们分别训练了VGG-11、VGG-13、VGG-16和VGG-19模型，
+不同模型的训练过程如图\ref{fig:vggshoulian}所示。
+\begin{figure}[htbp]
+\begin{minipage}{1.0\linewidth}
+\centerline{\includegraphics[width=1.0\linewidth]{figures/vgg11.png}}
+\centerline{(a)}
+\end{minipage}
+
+\begin{minipage}{1.0\linewidth}
+\centerline{\includegraphics[width=1.0\linewidth]{figures/vgg13.png}}
+\centerline{(b)}
+\end{minipage}
+
+\begin{minipage}{1.0\linewidth}
+\centerline{\includegraphics[width=1.0\linewidth]{figures/vgg16.png}}
+\centerline{(c)}
+\end{minipage}
+
+\begin{minipage}{1.0\linewidth}
+\centerline{\includegraphics[width=1.0\linewidth]{figures/vgg19.png}}
+\centerline{(d)}
+\end{minipage}
+
+\caption{VGG模型收敛示意图}
+\label{fig:vggshoulian}
+\end{figure}
+其中
+横轴表示训练轮数，
+纵轴表示loss值。
+$(a)$表示VGG-11的训练过程，
+$(b)$表示VGG-13的训练过程，
+$(c)$表示VGG-16的训练过程，
+$(d)$表示VGG-19的训练过程。
+不难发现，VGG-11收敛速度最快，
+并且最稳定。
+VGG-13和VGG-16收敛也比较快，
+VGG-19的收敛则需要不断优化参数，
+并且在模型的最后阶段容易出现震荡。
+除此之外，
+VGG-19有时会出现严重过拟合，
+模型在训练集上效果极好，在测试集上却表现欠佳。
+我们分析认为，造成这种现象的原因主要
+是模型相对较复杂，需要大量数据训练，
+而本文数据量不够充分。
+这种过拟合的现象不仅出现在VGG-19中，
+VGG-16中也会有出现。
+
+在训练时，当我们用所有的数据集训练过一轮之后，
+我们会测试模型在训练集上的表现，
+并记录模型表现最优时的参数，
+同时在收敛阶段统计模型的表现。
+\begin{table}
+\centering
+\begin{tabular}{cccccp{38mm}}
+\toprule
+\textbf{输入类型} & \textbf{REC} & \textbf{PRE} & \textbf{MDR} & \textbf{FDR}\\
+\midrule
+\mbox{VGG-11} & 0.9735 & 0.8661 & 0.0265 & 0.0966\\
+\mbox{VGG-13} & 0.9469 & 0.7643 & 0.0531 & 0.1875\\
+\mbox{VGG-16} & 0.9646 & 0.8015 & 0.0354 & 0.1534\\
+\mbox{VGG-19} & 0.9558 & 0.8120 & 0.0442 & 0.1420\\
+\bottomrule
+\end{tabular}
+\caption{VGG模型最优结果表}
+\label{tab:zuiyoujieguo}
+\end{table}
+\begin{table}
+\centering
+\begin{tabular}{cccccp{38mm}}
+\toprule
+\textbf{输入类型} & \textbf{REC} & \textbf{PRE} & \textbf{MDR} & \textbf{FDR}\\
+\midrule
+\mbox{VGG-11} & 0.9643 & 0.7297 & 0.0356 & 0.1786\\
+\mbox{VGG-13} & 0.9292 & 0.8468 & 0.0708 & 0.1080\\
+\mbox{VGG-16} & 0.9548 & 0.8120 & 0.0452 & 0.1420\\
+\mbox{VGG-19} & 0.9381 & 0.8281 & 0.0619 & 0.1250\\
+\bottomrule
+\end{tabular}
+\caption{VGG模型最终结果表}
+\label{tab:zuizhongjieguo}
+\end{table}
+表\ref{tab:zuiyoujieguo}中，展示了每个模型训练过程中得到的最优结果，
+在确定最优结果时，
+我们给予REC最高权重，认为REC最大的结果为最终结果。
+表\ref{tab:zuizhongjieguo}中展示了每个模型收敛后的结果，
+同样以REC为最高优先级。
+从结果中可以看到，往往在测试集上表现最好的并不是最终收敛后的模型，
+我们根据模型在测试集上的表现来确定参数，
+选择测试集上表现最好的模型参数作为最终参数。
+
+
+考虑到过拟合的问题，我们试图将VGG-11模型也简化一些，
+我们选择在最后两个卷积组中各去掉一层，
+其他层数保持不变，
+将这一模型记为VGG-9。
+实验结果如表\ref{tab:jianhuajiegou}所示，
+其中，VGG-9-best表示该模型在测试集上得到的最好结果，
+VGG-9-final表示模型收敛后在测试集上的结果，
+VGG-11-best和VGG-11-final则表示VGG-11的实验结果。
+从实验结果来看，简化了模型结构并没有取得更好的结果，我们分析认为原因可能有两个：
+首先，模型变得简单，描述能力下降；
+其次由于我们调整了模型，
+在使用ImageNet上预训练的参数初始化时，
+只能初始化部分模型，
+这使得模型中需要对参数的调整程度更大了。
+\begin{table}
+\centering
+\begin{tabular}{cccccp{38mm}}
+\toprule
+\textbf{输入类型} & \textbf{REC} & \textbf{PRE} & \textbf{MDR} & \textbf{FDR}\\
+\midrule
+\mbox{VGG-9-final} & 0.9027 & 0.7286 & 0.0973 & 0.2159\\
+\mbox{VGG-9-best} & 0.9292 & 0.7143 & 0.0708 & 0.286\\
+\mbox{VGG-11-final} & 0.9643 & 0.7297 & 0.0356 & 0.1786\\
+\mbox{VGG-11-best} & 0.9735 & 0.8661 & 0.0265 & 0.0966\\
+\bottomrule
+\end{tabular}
+\caption{简化模型结果表}
+\label{tab:jianhuajiegou}
+\end{table}
+综合上述实验结果，我们选择VGG-11作为我们的基础网络模型，
+并将本章算法的实验结果和基于传统算法的实验结果进行对比。
+如表\ref{tab:shenduxuexijieguo}所示，我们发现，本章算法的实验结果并不比使用HOG、Gredient和RGB联合特征训练出来的传统模型的结果好，我们认为最主要的原因有两点：首先在VGG-11中，输入数据的大小为$224\times 224$，虽然这是原始数据放大之后的结果，但由于缺陷目标往往较小，在这样的输入中，缺陷目标所占比例很小，而模型网络又比较深，使得缺陷区域的特征在最后的特征层中占比更小；其次，深度模型的训练往往需要大量数据，本文虽然使用数据增强增加了数据量，但仍不可避免出现一定的过拟合现象，导致模型泛化能力下降。
 \begin{table}
 \centering
 \begin{tabular}{cccccp{38mm}}
@@ -318,11 +456,23 @@ $Dropout$在向前传播时对神经元以一定的概率随机失活，这种�
 \textbf{输入类型} & \textbf{REC} & \textbf{PRE} & \textbf{MDR} & \textbf{FDR}\\
 \midrule
 \mbox{HOG+Gredient+RGB} & 0.9915 & 0.8158 & 0.0085 & 0.0400\\
-\mbox{VGG-11} & 0.9643 & 0.7297 & 0.0356 & 0.1786\\
+\mbox{VGG-11} & 0.9735 & 0.8661 & 0.0265 & 0.0966\\
 \bottomrule
 \end{tabular}
 \caption{深度学习和传统方法检测结果表}
 \label{tab:shenduxuexijieguo}
 \end{table}
-
-在检测速度方面，深度学习由于其复杂的网络结构和较多的网络参数，速度并不快，但由于深度学习和传统方法的输入大小不同，此处并不对其进行比较。
+\begin{table}
+\centering
+\begin{tabular}{cccccccp{38mm}}
+\toprule
+\mbox{模型种类} & \mbox{VGG-9} & \mbox{VGG-11} & \mbox{VGG-13} & \mbox{VGG-16} & \mbox{VGG-19}  \\
+\mbox{检测速度} & 16ms & 23ms & 29ms & 34ms & 46ms  \\
+\bottomrule
+\end{tabular}
+\caption{不同模型检测速度表}
+\label{tab:jiancesudu}
+\end{table}
+基于我们的实验环境，不同模型的检测速度如表\ref{tab:jiancesudu}所示。
+这里的检测速度是指将一个滑动窗口分类的速度，没有考虑加载模型的时间。
+显然，随着模型深度的增加，模型的检测速度越来越慢。

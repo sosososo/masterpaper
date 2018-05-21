@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.4.29)  21 MAY 2018 13:45
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.4.29)  22 MAY 2018 07:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2415,8 +2415,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 34.
 
-File: figures/chuantongjiancebuzhou.PNG Graphic file (type QTm)
-<use  "figures/chuantongjiancebuzhou.PNG" > [2] [3]
+File: figures/chuantongjiance.jpg Graphic file (type QTm)
+<use  "figures/chuantongjiance.jpg" > [2] [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
@@ -3365,7 +3365,19 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 300.
 
-) [57] [58]
+File: figures/vgg11.png Graphic file (type QTm)
+<use  "figures/vgg11.png" >
+File: figures/vgg13.png Graphic file (type QTm)
+ <use  "figures/vgg13.png" >
+File: figures/vgg16.png Graphic file (type QTm)
+
+<use  "figures/vgg16.png" >
+File: figures/vgg19.png Graphic file (type QTm)
+ <use  "figures/vgg19.png" >
+
+LaTeX Warning: Float too large for page by 114.85384pt on input line 354.
+
+[57] [58]) [59] [60]
 \openout2 = `summary.aux'.
 
  (./summary.tex
@@ -3380,7 +3392,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 6.
 
-[59
+[61
 
 
 
@@ -3395,24 +3407,24 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 44.
 
-) [60] [61]
+) [62] [63]
 \openout2 = `thanks.aux'.
 
- (./thanks.tex [62
+ (./thanks.tex [64
 
 
 
-]) [63] (./MG1533047.bbl [64
+]) [65] (./MG1533047.bbl [66
 
 
-] [65] [66] [67]
-[68]
+] [67] [68] [69]
+[70]
 Underfull \hbox (badness 2980) in paragraph at lines 381--384
 []\TU/TimesNewRoman(0)/m/n/12.05 HINTON G. Neural Networks for Machine Learning
 , Coursera[J]. URL:
  []
 
-[69]
+[71]
 Underfull \hbox (badness 1132) in paragraph at lines 431--436
 \TU/TimesNewRoman(0)/m/n/12.05 chine Learning on Heterogeneous Distributed Syst
 ems[J/OL]. CoRR, 2016,
@@ -3436,7 +3448,7 @@ Underfull \hbox (badness 4765) in paragraph at lines 456--461
 ep learning[C]
  []
 
-) [70]
+) [72]
 \openout2 = `resume.aux'.
 
  (./resume.tex
@@ -3445,10 +3457,10 @@ Overfull \hbox (6.33968pt too wide) in paragraph at lines 16--20
 TU/TimesNewRoman(0)/m/n/12.05 201610475529.8\TU/SimSun(0)/m/n/12.05 ）| 
  []
 
-) [71
+) [73
 
 
-] [72
+] [74
 
 
 ]
@@ -3486,7 +3498,7 @@ Underfull \hbox (badness 10000) in alignment at lines 195--195
 [][][][][][][] 
  []
 
-[73] [74
+[75] [76
 
 ] 
 AED: lastpage setting LastPage
@@ -3508,12 +3520,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
  ) 
 Here is how much of TeX's memory you used:
- 34684 strings out of 493005
- 633670 string characters out of 6137956
- 761079 words of memory out of 5000000
- 38006 multiletter control sequences out of 15000+600000
+ 34689 strings out of 493005
+ 633352 string characters out of 6137956
+ 764443 words of memory out of 5000000
+ 38007 multiletter control sequences out of 15000+600000
  49445 words of font info for 235 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  52i,17n,79p,10429b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on MG1533047.xdv (86 pages, 1105760 bytes).
+Output written on MG1533047.xdv (88 pages, 1137516 bytes).
