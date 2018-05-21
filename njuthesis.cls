@@ -926,7 +926,6 @@
   {\kaishu\zihao{4}%
   \noindent\njut@cap@abstract@title{：}%
   \njutunderline[318pt]{\njut@value@abstract@titlea}\\
-  \noindent\njutunderline[\textwidth]{\njut@value@abstract@titleb}\\
   \noindent\njutunderline[178pt]{\njut@value@major}%
   \njut@cap@abstract@major%
   \njutunderline[50pt]{\njut@value@grade}%

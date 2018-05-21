@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.4.29)  20 MAY 2018 14:17
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.4.29)  21 MAY 2018 13:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3439,7 +3439,13 @@ ep learning[C]
 ) [70]
 \openout2 = `resume.aux'.
 
- (./resume.tex) [71
+ (./resume.tex
+Overfull \hbox (6.33968pt too wide) in paragraph at lines 16--20
+\TU/SimSun(0)/m/n/12.05 矩 阵 逆 运 算 的 图 像 扭 曲 方 法。|  中 国 发 明 专 利  |（专 利 申 请 号：| \
+TU/TimesNewRoman(0)/m/n/12.05 201610475529.8\TU/SimSun(0)/m/n/12.05 ）| 
+ []
+
+) [71
 
 
 ] [72
@@ -3504,10 +3510,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
 Here is how much of TeX's memory you used:
  34684 strings out of 493005
  633670 string characters out of 6137956
- 762063 words of memory out of 5000000
+ 761079 words of memory out of 5000000
  38006 multiletter control sequences out of 15000+600000
  49445 words of font info for 235 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  52i,17n,79p,10429b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on MG1533047.xdv (86 pages, 1115356 bytes).
+Output written on MG1533047.xdv (86 pages, 1105760 bytes).
