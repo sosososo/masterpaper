@@ -16,7 +16,7 @@
 \BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 畸变校正}{section.2.2}% 16
 \BOOKMARK [2][-]{subsection.2.2.4}{2.2.4 光线补偿}{section.2.2}% 17
 \BOOKMARK [2][-]{subsection.2.2.5}{2.2.5 法线计算}{section.2.2}% 18
-\BOOKMARK [1][-]{section.2.3}{2.3 实验结果}{chapter.2}% 19
+\BOOKMARK [1][-]{section.2.3}{2.3 实验结果和分析}{chapter.2}% 19
 \BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 硬件设备结果}{section.2.3}% 20
 \BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 法线提取结果}{section.2.3}% 21
 \BOOKMARK [0][-]{chapter.3}{3 基于传统算法的缺陷检测}{}% 22
@@ -41,21 +41,20 @@
 \BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 特征提取结果}{section.3.4}% 41
 \BOOKMARK [2][-]{subsection.3.4.3}{3.4.3 缺陷检测结果}{section.3.4}% 42
 \BOOKMARK [0][-]{chapter.4}{4 基于深度学习的缺陷检测}{}% 43
-\BOOKMARK [1][-]{section.4.1}{4.1 基本概念}{chapter.4}% 44
+\BOOKMARK [1][-]{section.4.1}{4.1 基础结构}{chapter.4}% 44
 \BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 卷积层}{section.4.1}% 45
 \BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 激活函数}{section.4.1}% 46
 \BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 池化层}{section.4.1}% 47
 \BOOKMARK [2][-]{subsection.4.1.4}{4.1.4 全连接层}{section.4.1}% 48
 \BOOKMARK [2][-]{subsection.4.1.5}{4.1.5 损失函数}{section.4.1}% 49
 \BOOKMARK [2][-]{subsection.4.1.6}{4.1.6 优化方法}{section.4.1}% 50
-\BOOKMARK [1][-]{section.4.2}{4.2 深度学习模型}{chapter.4}% 51
+\BOOKMARK [1][-]{section.4.2}{4.2 网络模型}{chapter.4}% 51
 \BOOKMARK [1][-]{section.4.3}{4.3 数据预处理}{chapter.4}% 52
-\BOOKMARK [1][-]{section.4.4}{4.4 模型训练}{chapter.4}% 53
-\BOOKMARK [1][-]{section.4.5}{4.5 实验结果和分析}{chapter.4}% 54
-\BOOKMARK [0][-]{chapter.5}{5 总结与展望}{}% 55
-\BOOKMARK [1][-]{section.5.1}{5.1 本文工作总结}{chapter.5}% 56
-\BOOKMARK [1][-]{section.5.2}{5.2 未来工作展望}{chapter.5}% 57
-\BOOKMARK [0][-]{chapter*.33}{致 谢}{}% 58
-\BOOKMARK [0][-]{chapter*.34}{参考文献}{}% 59
-\BOOKMARK [0][-]{chapter*.35}{简历与科研成果}{}% 60
-\BOOKMARK [0][-]{chapter*.36}{学位论文出版授权书}{}% 61
+\BOOKMARK [1][-]{section.4.4}{4.4 实验结果和分析}{chapter.4}% 53
+\BOOKMARK [0][-]{chapter.5}{5 总结与展望}{}% 54
+\BOOKMARK [1][-]{section.5.1}{5.1 本文工作总结}{chapter.5}% 55
+\BOOKMARK [1][-]{section.5.2}{5.2 未来工作展望}{chapter.5}% 56
+\BOOKMARK [0][-]{chapter*.34}{致 谢}{}% 57
+\BOOKMARK [0][-]{chapter*.35}{参考文献}{}% 58
+\BOOKMARK [0][-]{chapter*.36}{简历与科研成果}{}% 59
+\BOOKMARK [0][-]{chapter*.37}{学位论文出版授权书}{}% 60

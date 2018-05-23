@@ -668,6 +668,7 @@ $|N|$表示集合$N$的元素个数，
 $|P|$表示集合$P$的元素个数，
 $ceil()$表示向上取整函数。
 子集的划分使用随机抽样的方法，
+如图所示，
 我们首先从$N$中随机无放回的抽取$|P|$个元素组成第一个子集$N_1$，
 接着不断重复这一过程直到得到$k-1$个子集，
 这时$N$中剩余的元素个数为$N_{rmain}$，
@@ -677,13 +678,13 @@ $ceil()$表示向上取整函数。
 从而得到$k$个正负样本均衡的子数据集。
 对于每个子数据集，我们训练一个强分类器，
 最后使用级联\cite{viola2001rapid}(Cascade)的方式将这些分类器用于缺陷检测。
-
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1.0\linewidth]{figures/cascade.png}
-\caption{级联分类器模 型图}
+\includegraphics[width=0.8\linewidth]{figures/db.png}
+\caption{数据集划分型图}
 \label{fig:cascade}
 \end{figure}
+
 级联分类器流程如图\ref{fig:cascade}所示，首先使用Adaboost组合SVM训练出$K$个不同的强分类器，
 我们将每个强分类器的检测视作一个$stage$，每个$stage$中基分类器的个数为$n$。
 在检测的时候使用滑动窗口的方式将输入图片划分成不同的窗口，首先将所有的窗口用第一个强分类器进行分类，即用$stage~1$分类，
@@ -692,6 +693,12 @@ $ceil()$表示向上取整函数。
 将所有检测为缺陷的窗口送往下一个$stage$中，
 重复这一步骤，
 直到所有的强分类器都检测这一窗口为缺陷，将其视为缺陷，归入$targets$中。
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=1.0\linewidth]{figures/cascade.png}
+\caption{级联分类器模型图}
+\label{fig:cascade}
+\end{figure}
 
 由于在缺陷检测中，一旦发生漏检，缺陷零件流出，往往会造成重大损失，
 相对于漏检，误检一个、几个甚至几十个零件所带来的损失往往可以忽略不计，我们需要尽可能的提高检测率，在检测率尽可能高的情况下降低误识率。
@@ -794,7 +801,7 @@ $Top$和$Normal$边缘相对简单，和真正的边缘比较接近，
 漏检率（ $missing~detection~rate$，记为$MDR$）、
 误检率（$false~detection~rate$，记为$FDR$）
 作为模型评价标准，
-其中漏检率是最重要的标准，误检率往往不是特别重要。
+其中召回率和漏检率是最重要的标准，误检率往往不是特别重要。
 假设总共用来测试的零件数量为$N$，
 其中正样本即有缺陷的样本数量为$N_p$，
 负样本即没有缺陷的样本个数为$N_n$，
@@ -803,7 +810,7 @@ $Top$和$Normal$边缘相对简单，和真正的边缘比较接近，
 $N_n$个负样本中分类正确的个数为$TN$，
 分类错误的个数为$FP$。
 我们可以使用公式\eqref{eq:rec}、\eqref{eq:pre}、\eqref{eq:mdr}、\eqref{eq:fdr}
-计算评估指标。
+计算评估指标，显然有$MDR=1-REC$。
 \begin{gather}
 REC=\frac{TP}{TP+FN}\label{eq:rec}\\
 PRE=\frac{TP}{TP+FP}\label{eq:pre}\\
@@ -881,10 +888,10 @@ $(a)$表示法线图特征的检测结果，
 \textbf{输入类型} & \textbf{REC} & \textbf{PRE} & \textbf{MDR} & \textbf{FDR}\\
 \midrule
 \mbox{Haar-like} & 0.8214 & 0.4677 & 0.1786 & 0.1669\\
-\mbox{LBP} & 0.8932 & 0.5374 & 0.1062 & 0.1372\\
+\mbox{LBP} & 0.8938 & 0.5374 & 0.1062 & 0.1372\\
 \mbox{Gredient} & 0.9114 & 0.5727 & 0.0886 & 0.1214\\
 \mbox{HOG} & 0.9642 & 0.7207 & 0.0358 & 0.0667\\
-\mbox{GLCM} & 0.7862 & 0.4921 & 0.2183 & 0.1448\\
+\mbox{GLCM} & 0.7866 & 0.4921 & 0.2134 & 0.1448\\
 \mbox{HOG+Gredient+RGB} & 0.9915 & 0.8158 & 0.0085 & 0.0400\\
 \bottomrule
 \end{tabular}

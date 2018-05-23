@@ -3,31 +3,47 @@
 
 With the continuous development of computer vision and machine learning,
 something has been changed.
-In the field of computer vision and machine learning, object detection is a very classical and basic subject, while defect detection is a very important application field of it. 
-The traditional object detection algorithm mainly involves two steps. First, the features artificial designed in the image are extracted, then the classifier with the features as input is used to classify the image. There are two main disadvantages int this type of method, one of them is the difficulty of feature engineering, another is that the performance of the classification model is susceptible to the textures ot the part, lighting, noises, and other conditions.
-With the vigorous development of deep learning, more and more different detection models have been developed to detect object, which have achieved ideal results in many fields, especially in competitions. 
-However, those models always demand a mountain of samples and is not good at detecting little object while most of defections are very small.
+In the fields of computer vision and machine learning, object detection is a very classical and basic subject, while defect detection plays an important role in related applications. 
+The traditional object detection algorithm mainly involves two steps.
+The first is to extract the artificial features designed in the image and the second is to classify the images with the features as input by a classifier.
+There are two main disadvantages in this method, 
+one is the difficulty of feature engineering, 
+the other is that the performance of the classification model is susceptible to lighting, noise, texture of the part and other conditions.
+With the vigorous development of deep learning, more and more different detection models have been developed to detect objects, which have achieved ideal results in many fields, especially in competitions. 
+However, those models always demand a mountain of samples and
+are not good at detecting little objects while most of defections are very small.
 
-To solve this problem, this paper takes the normal map as the input of defect detection for the first time. We do the defect detecion with a traditional method combined SVM, Adaboost and Cascade and get a state-of-the-art performance. We also take the normal map as input as convolutional neural network, and compare the results with traditional method's .
-The main work and innovation of this article could be find as follows:
+To solve this problem, this paper takes the normal map as the input of defect detection for the first time. We do the defect detecion with a traditional method combined SVM, Adaboost and Cascade and a state-of-the-art performance is acheived. We also take the normal map as input as convolutional neural network, and compare the results with traditional method's .
+The main work and innovation of this article could be found as follows:
 
 \begin{enumerate}
 \item We propose a method to acquire the normal map of parts' surface and  design an equipment to acquire the method's inputs. 
- This equipment includes a camera,LED light bars, a stepper motor and so many other component, 
-  we make up those into five models so that the equipment could get required information.
- And we put forward a model to compute the normal map with the inputs collected by our equipment maintained above. To make up the imperfection of the capture equipment, we make some corrections and enhancements before the normal map's computation.
- Those corrections and enhancements include
- color correction, distortion calibration and light compensation.
-\item Also, we has experiment on the traditional object detection methods with our normal maps extracted. We extract many diffierent features form the normal map such as haar-like, LBP, GLCM, HOG and others, 
-and use those features as the model's input, then we combine those features according to the model's outputs. 
-Furthermore, considering rareness of defections on the parts,
-we try a variety of ways to get more datas such as rotation and mirroring, considering the imbalance of datas between the parts with defections and those without defection, we divide the dataset into some subdatasets. For each subdatasets, we use the Adaboost method to train a more powerful classifier with the base learner of SVM, then use Cascade to combine those classifier to do defect detection.
-\item At last, we make some experiments with deep learning modes. 
+This equipment includes a camera,LED light bars, a stepper motor and so many other components. 
+All components are constituted into five models so that we could get required information.
+And we put forward a method to compute the normal maps with the inputs collected by our equipment metioned above.
+To make up the imperfection of the capture equipment,
+we add some corrections and enhancements before the normal map's computation.
+Those are
+color correction,
+white balance correction,
+distortion correction 
+and light compensation.
+\item 
+We also do some experiments on traditional object detection methods with the normal maps extracted by us.
+We extract many diffierent features form the normal maps such as haar-like, LBP, GLCM, Gradient, HOG and others,
+and the model's results and performances with those features as input are evaluated separately.
+Then we combine those features according to the model's results and performances. 
+Furthermore, a variety of ways are tried to get more data such as rotation and mirroring because of the rareness of defections on the parts.
+And considering the imbalance of data between the parts with defections and those without defection, 
+we divide the datasets into several subdatasets.
+For each subdatasets,
+we use the the method of Adaboost to train a more powerful classifier with the base learner trained by SVM, then we use Cascade to combine those classifier to detect defections.
+\item At last, we make some experiments with deep learning models. 
 First, we use the sliding windows to divide the original normal map into some smaller windows,
-and do some data augmentation on those windows. 
-We also divide the dataset into some subdatasets and train a model for each subdataset.
-We combine those moodels with Cascade to do defection detect.
-We also do some analysises on the results and performance of this model compared with traditional methods'.
+and do some data augmentation on those windows as before. 
+We also divide the datasets into some subdatasets and train a model for each subdataset.
+We combine those moodels with Cascade to detect defections.
+We also analyse the results and performances of this model comparing to traditional methods'.
 \end{enumerate}
 
 

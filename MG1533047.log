@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.4.29)  22 MAY 2018 16:32
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.4.29)  23 MAY 2018 22:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1906,8 +1906,11 @@ LaTeX Warning: Unused global option(s):
     [doubleside].
 
 (./MG1533047.aux (./abstract.aux) (./english-abstract.aux) (./introduction.aux)
-(./normalmap.aux) (./traditional-method.aux) (./deeplearning-method.aux)
-(./summary.aux) (./thanks.aux) (./resume.aux))
+(./normalmap.aux) (./traditional-method.aux
+
+LaTeX Warning: Label `fig:cascade' multiply defined.
+
+) (./deeplearning-method.aux) (./summary.aux) (./thanks.aux) (./resume.aux))
 \openout1 = `MG1533047.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 108.
@@ -2420,53 +2423,53 @@ File: figures/chuantongjiance.jpg Graphic file (type QTm)
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 81.
+(hyperref)                removed on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 81.
+(hyperref)                removed on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 85.
+(hyperref)                removed on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 85.
+(hyperref)                removed on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 85.
+(hyperref)                removed on input line 87.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 85.
+(hyperref)                removed on input line 87.
 
 [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 124.
+(hyperref)                removed on input line 133.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 124.
+(hyperref)                removed on input line 133.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 124.
+(hyperref)                removed on input line 133.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 124.
+(hyperref)                removed on input line 133.
 
 [5]) [6]
 \openout2 = `normalmap.aux'.
@@ -2476,12 +2479,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 8.
+(hyperref)                removed on input line 10.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 8.
+(hyperref)                removed on input line 10.
 
 File: figures/zheguangmokuai.png Graphic file (type QTm)
 <use  "figures/zheguangmokuai.png" > [7
@@ -2498,101 +2501,110 @@ File: figures/capturea.png Graphic file (type QTm)
 File: figures/captureb.png Graphic file (type QTm)
  <use  "figures/captureb.png" >
 
-LaTeX Warning: Float too large for page by 27.66444pt on input line 78.
+LaTeX Warning: Float too large for page by 27.66444pt on input line 83.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 80.
+(hyperref)                removed on input line 85.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 80.
-
-[9] [10]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 91.
+(hyperref)                removed on input line 85.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 91.
+(hyperref)                removed on input line 96.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 91.
+(hyperref)                removed on input line 96.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 91.
-
-[11]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 138.
+(hyperref)                removed on input line 96.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 138.
+(hyperref)                removed on input line 96.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9]
+[10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 148.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 138.
+(hyperref)                removed on input line 148.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 138.
+(hyperref)                removed on input line 148.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 148.
 
 [12]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 161.
+(hyperref)                removed on input line 174.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 161.
+(hyperref)                removed on input line 174.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 161.
+(hyperref)                removed on input line 174.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 161.
+(hyperref)                removed on input line 174.
 
-[13]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 200.
+Underfull \vbox (badness 2012) has occurred while \output is active []
 
+ [13]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 200.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 200.
+(hyperref)                removed on input line 213.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 200.
+(hyperref)                removed on input line 213.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 213.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 213.
 
 File: figures/gaungxiansunshia.png Graphic file (type QTm)
 <use  "figures/gaungxiansunshia.png" >
@@ -2630,93 +2642,108 @@ File: figures/guangxianshuaijianduibitushuipingn.png Graphic file (type QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-[16]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 335.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 335.
+(hyperref)                removed on input line 348.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 335.
+(hyperref)                removed on input line 348.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 335.
+(hyperref)                removed on input line 348.
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 348.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16]
 File: figures/guangxianfanshetu.png Graphic file (type QTm)
-<use  "figures/guangxianfanshetu.png" > [17]
-Overfull \hbox (1.82437pt too wide) in paragraph at lines 393--414
+
+<use  "figures/guangxianfanshetu.png" >
+Underfull \vbox (badness 1565) has occurred while \output is active []
+
+ [17]
+Overfull \hbox (1.82437pt too wide) in paragraph at lines 406--427
 \OML/txmi/m/it/12.05 NorthWest$ \TU/SimSun(0)/m/n/12.05 和 $\OML/txmi/m/it/12.05
  SouthEast$ \TU/SimSun(0)/m/n/12.05 用 来 保 存 数 据，|  其 中 $\OML/txmi/m/it/12.05 No
 rthWest$ \TU/SimSun(0)/m/n/12.05 的 $\OML/txmi/m/it/12.05 R$ \TU/SimSun(0)/m/n/1
 2.05 通 道 保 存 $[][]$，|
  []
 
-[18]
+
+Underfull \vbox (badness 1147) has occurred while \output is active []
+
+ [18]
 File: figures/faxiantuyuantu.png Graphic file (type QTm)
- <use  "figures/faxiantuyuantu.png" >
+
+<use  "figures/faxiantuyuantu.png" >
 File: figures/faxiantujieguo.png Graphic file (type QTm)
  <use  "figures/faxiantujieguo.png" >
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 463.
+(hyperref)                removed on input line 476.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 463.
-
-[19]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 468.
+(hyperref)                removed on input line 476.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 468.
+(hyperref)                removed on input line 481.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 468.
+(hyperref)                removed on input line 481.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 468.
+(hyperref)                removed on input line 481.
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 481.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
 File: figures/yingjianjieguo.png Graphic file (type QTm)
+
 <use  "figures/yingjianjieguo.png" >
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 497.
+(hyperref)                removed on input line 510.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 497.
+(hyperref)                removed on input line 510.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 497.
+(hyperref)                removed on input line 510.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 497.
+(hyperref)                removed on input line 510.
 
 [20]
 File: figures/faxianduibia.png Graphic file (type QTm)
@@ -3075,18 +3102,10 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 657.
 
+File: figures/db.png Graphic file (type QTm)
+<use  "figures/db.png" >
 File: figures/cascade.png Graphic file (type QTm)
-<use  "figures/cascade.png" > [40]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 701.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 701.
-
+ <use  "figures/cascade.png" > [40]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
@@ -3096,79 +3115,85 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
 (hyperref)                removed on input line 708.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 708.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 708.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 717.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 717.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 717.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 717.
 
 [41]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 715.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 715.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 715.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 715.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 724.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 724.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 724.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 724.
+
 File: figures/butongdengguangzhankaitu.png Graphic file (type QTm)
- <use  "figures/butongdengguangzhankaitu.png" >
+<use  "figures/butongdengguangzhankaitu.png" >
 File: figures/butongdengguangcanny.png Graphic file (type QTm)
 
 <use  "figures/butongdengguangcanny.png" > [42]
 File: figures/butongdengguanglbp.png Graphic file (type QTm)
 
-<use  "figures/butongdengguanglbp.png" >
+<use  "figures/butongdengguanglbp.png" > [43]
 File: figures/butongengguanghog.png Graphic file (type QTm)
 
-<use  "figures/butongengguanghog.png" > [43]
+<use  "figures/butongengguanghog.png" >
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 789.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 789.
+(hyperref)                removed on input line 796.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 789.
+(hyperref)                removed on input line 796.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 789.
+(hyperref)                removed on input line 796.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 2.00876pt
+(hyperref)                removed on input line 796.
 
- [44]
+[44]
 File: figures/chuantongjiancejieguo.png Graphic file (type QTm)
-
-<use  "figures/chuantongjiancejieguo.png" > [45])
+ <use  "figures/chuantongjiancejieguo.png" > [45]
 Underfull \vbox (badness 3690) has occurred while \output is active []
 
- [46]
+ [46])
 [47]
 \openout2 = `deeplearning-method.aux'.
 
@@ -3344,28 +3369,19 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 278.
+(hyperref)                removed on input line 279.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 278.
+(hyperref)                removed on input line 279.
 
 
 Underfull \vbox (badness 1688) has occurred while \output is active []
 
  [56]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 300.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \kern 2.00876pt
-(hyperref)                removed on input line 300.
-
 File: figures/vgg11.png Graphic file (type QTm)
+
 <use  "figures/vgg11.png" >
 File: figures/vgg13.png Graphic file (type QTm)
  <use  "figures/vgg13.png" >
@@ -3373,8 +3389,11 @@ File: figures/vgg16.png Graphic file (type QTm)
 
 <use  "figures/vgg16.png" >
 File: figures/vgg19.png Graphic file (type QTm)
- <use  "figures/vgg19.png" > [57] [58]) [59]
-[60]
+ <use  "figures/vgg19.png" >
+Underfull \vbox (badness 2318) has occurred while \output is active []
+
+ [57]
+[58] [59]) [60]
 \openout2 = `summary.aux'.
 
  (./summary.tex
@@ -3514,15 +3533,18 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 198.
  ) 
 Here is how much of TeX's memory you used:
- 34689 strings out of 493005
- 633352 string characters out of 6137956
- 764438 words of memory out of 5000000
- 38007 multiletter control sequences out of 15000+600000
+ 34691 strings out of 493005
+ 633372 string characters out of 6137956
+ 763478 words of memory out of 5000000
+ 38008 multiletter control sequences out of 15000+600000
  49445 words of font info for 235 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  52i,17n,79p,10429b,882s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on MG1533047.xdv (88 pages, 1137652 bytes).
+Output written on MG1533047.xdv (88 pages, 1135756 bytes).

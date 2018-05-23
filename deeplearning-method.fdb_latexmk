@@ -1,12 +1,12 @@
 # Fdb version 3
-["xdvipdfmx"] 1526928195 "deeplearning-method.xdv" "deeplearning-method.pdf" "deeplearning-method" 1526928196
-  "deeplearning-method.xdv" 1526928194 4148 cc80dea63aa099de385f961cfc1fe180 "xelatex"
+["xdvipdfmx"] 1526980714 "deeplearning-method.xdv" "deeplearning-method.pdf" "deeplearning-method" 1526980715
+  "deeplearning-method.xdv" 1526980713 4148 8142a288fe13bde7ba7c8ddeff383590 "xelatex"
   (generated)
   "deeplearning-method.pdf"
-["xelatex"] 1526928193 "deeplearning-method.tex" "deeplearning-method.xdv" "deeplearning-method" 1526928196
+["xelatex"] 1526980713 "deeplearning-method.tex" "deeplearning-method.xdv" "deeplearning-method" 1526980715
   "c:/texlive/2017/texmf-var/web2c/xetex/xelatex.fmt" 1524992938 3678315 788f67f2cd879729874c22932a32eaa0 ""
-  "deeplearning-method.aux" 1526916259 10153 098dea4438d5cd956ca28dae765adc5c ""
-  "deeplearning-method.tex" 1526928063 24229 aa9851f86772a21848db615d7c5fb207 ""
+  "deeplearning-method.aux" 1526980651 11696 232385898cf25392fc968e8ddde9965e ""
+  "deeplearning-method.tex" 1526980678 24608 fcf2a359f355ea77e0a280d0cffd6ab6 ""
   (generated)
   "deeplearning-method.xdv"
   "deeplearning-method.log"
