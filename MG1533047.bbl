@@ -210,13 +210,6 @@
   }Vol~4}\@. \bibyear{2009}\thinspace{}\textnormal{:
   }\bibpages{2394\thinspace{}\textnormal{--}\thinspace{}2397}\@.
 
-\bibitem{zhang2000flexible}
-\bibauthor{ZHANG Z}\@. \bibtitle{A flexible new technique for camera
-  calibration}\bibmark{[J]}\@. \bibjournal{IEEE Transactions on pattern
-  analysis and machine intelligence}\@, \bibyear{2000}\@,
-  \bibvolume{22}\bibnumber{(11)}\thinspace{}\textnormal{:
-  }\bibpages{1330\thinspace{}\textnormal{--}\thinspace{}1334}\@.
-
 \bibitem{weng1992camera}
 \bibauthor{WENG J\@, COHEN P\@, HERNIOU M, et~al}\@. \bibtitle{Camera
   calibration with distortion models and accuracy evaluation}\bibmark{[J]}\@.
@@ -232,6 +225,13 @@
   Proceedings., 1997 IEEE Computer Society Conference on}\@.
   \bibyear{1997}\thinspace{}\textnormal{:
   }\bibpages{1106\thinspace{}\textnormal{--}\thinspace{}1112}\@.
+
+\bibitem{zhang2000flexible}
+\bibauthor{ZHANG Z}\@. \bibtitle{A flexible new technique for camera
+  calibration}\bibmark{[J]}\@. \bibjournal{IEEE Transactions on pattern
+  analysis and machine intelligence}\@, \bibyear{2000}\@,
+  \bibvolume{22}\bibnumber{(11)}\thinspace{}\textnormal{:
+  }\bibpages{1330\thinspace{}\textnormal{--}\thinspace{}1334}\@.
 
 \bibitem{贾灵芝2008基于自适应光线补偿的人脸检测算法}
 \bibauthor{贾灵芝\@, 李岚\@, 钱坤喜}\@.

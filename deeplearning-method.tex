@@ -9,17 +9,17 @@
 
 \section{基础结构}
 
-本文使用卷积神经网络($Convolutional Neural Networks,\mbox{简称}~CNN$)结构进行缺陷检测。
+本文使用卷积神经网络（$Convolutional~Neural~Networks,\mbox{简称}~CNN$）结构进行缺陷检测。
 卷积神经网络是一种层次模型，
 它的输入是一张图像，
-接着通过卷积($convolution$)操作、
-池化\cite{chechik1998synaptic}($pooling$)操作和非线性激活函数($non-linear~activation~function$)映射等一系列操作的堆叠，
+接着通过卷积（$convolution$）操作、
+池化\cite{chechik1998synaptic}（$pooling$）操作和非线性激活函数（$non-linear~activation~function$）映射等一系列操作的堆叠，
 逐渐从原始图像提取出高维特征，
 最后通过全连接层和输出层连接，
 将目标任务(分类、回归等)形式化为目标函数，
-并使用损失函数($loss function$)
-计算预测值和真实值之间的损失($loss$)，
-使用反向传播算法\cite{周志华2016机器学习}($back-propagation algorithm$)将损失从后向前传播，更新参数，
+并使用损失函数（$loss~function$）
+计算预测值和真实值之间的损失（$loss$），
+使用反向传播算法\cite{周志华2016机器学习}（$back-propagation~algorithm$）将损失从后向前传播，更新参数，
 如此反复直到模型收敛。
 
 好的卷积神经网络模型得益于良好的网络结构设计，
@@ -31,14 +31,14 @@
 \subsection{卷积层}
 
 卷积是卷积神经网络中的基础操作。所谓卷积，就是使用一个固定大小的卷积核，通过滑动窗口的形式和图像对应区域做內积（逐个元素相乘再求和）操作，此时卷积核为一个固定大小的矩阵，这些矩阵的值即为该卷积核的权值。一般我们使用正方形的卷积核，并且其大小取奇数，常用的有$1\times 1$、$3\times 3$、$5\times 5$的卷积核，卷积核的大小即对应了滑动窗口的大小。
-每完成一次卷积操作，卷积核移动一个位置，移动的大小记为卷积步长($stride$)。
+每完成一次卷积操作，卷积核移动一个位置，移动的大小记为卷积步长（$stride$）。
 因为图像是二维的，为了卷积整幅图像，需要卷积核向两个方向移动，因此卷积步长也是二维的，一般取$1\times 1$。
 
 不难看出，卷积是一种局部操作，通过一定大小的卷积核作用于图像的局部区域，从而得到图像的局部信息，通过层层卷积，高层的卷积核可以扫过的信息会覆盖原始图片的更大区域，提取图像更高层的信息。需要注意的是，图片的底层特征往往与其在图片中的位置无关，因此我们在对图像做一次卷积时使用权值相同的卷积核，这被称为“权值共享”。权值共享大大减少了卷积层的参数，起到了防止过拟合的作用。
 
 \subsection{激活函数}
 
-激活函数层又称为非线性映射层，其引入正是为了增加整个网络的表达能力(非线性)。如果没有激活函数层，那么整个网络仍可以看作是若干线性操作的堆叠，只能起到线性映射的作用。直观的看，激活函数模拟了神经元的特点：接收一组输入信号并产生输出。
+激活函数层又称为非线性映射层，其引入正是为了增加整个网络的表达能力。如果没有激活函数层，那么整个网络仍可以看作是若干线性操作的堆叠，只能起到线性映射的作用。直观的看，激活函数模拟了神经元的特点：接收一组输入信号并产生输出。
 激活函数的输入往往是卷积层卷积之后得到的值，因此通常激活函数层紧跟着卷积层，被合并为一层。
 
 从定义来看，几乎所有的连续可导函数都可以作为激活函数，但是目前常见的多是分段性和具有指数形状的非线性函数，
@@ -54,16 +54,16 @@ $Sigmoid$是使用范围最广的一类激活函数，
 f(x)=\frac{1}{1+e^{-x}}
 \label{eq:sigmoid}
 \end{equation}
-其函数形状如图\ref{fig:Sigmoid}所示，从图中可以明显看出，经过$Sigmoid$型函数作用后，输出响应值的值域被压缩到$(0,1)$之间。
+其函数如图\ref{fig:Sigmoid}所示，从图中可以明显看出，经过$Sigmoid$型函数作用后，输出响应值的值域被压缩到$(0,1)$之间。
 $Sigmoid$ 有其有利的一面，它在物理意义上最为接近生物神经元，并且$(0,1)$的输出范围可以理解为一个概率分布。
 但是不难看出，
-对于大于5(或小于-5)的值，无论多大(或多小)都会被压缩为1(或0)，此部分的梯度会接近0，
+对于大于5（或小于-5）的值，无论多大（或多小）都会被压缩为1（或0），此部分的梯度会接近0，
 从而导致在误差反向传播过程中该区域的误差很难传播，进而导致模型无法收敛，这一现象被称为“梯度消失”。
 梯度消失可以被其它优化方法缓解，如Batch Normalization\cite{ioffe2015batch}。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.6\linewidth]{figures/sigmoid.png} 
-\caption{$Sigmoid$激活函数示意图}
+\includegraphics[width=0.7\linewidth]{figures/sigmoid.pdf} 
+\caption{$Sigmoid$激活函数和其梯度示意图}
 \label{fig:Sigmoid}
 \end{figure} 
 
@@ -71,20 +71,14 @@ $Sigmoid$ 有其有利的一面，它在物理意义上最为接近生物神经�
 
 $Tanh$激活函数又被称为双正切函数，
 其形状与$Sigmoid$函数类似，都能将输出压缩到$(0,1)$，
-但是该函数输出的均值比$sigmoid$函数更接近0，在训练时收敛速度更快。
+但是该函数输出的均值比$Sigmoid$函数更接近0，在训练时收敛速度更快。
 $Tanh$函数形式如公式\eqref{eq:tanh}所示。
 \begin{equation}
-tanh⁡(x)=\frac{1-e^{-2x}}{1+e^{-2x}}
+Tanh⁡(x)=\frac{1-e^{-2x}}{1+e^{-2x}}
 \label{eq:tanh}
 \end{equation}
-$Tanh$函数形状如图\ref{fig:tanh}所示，不难看出，
-$tanh$函数在$x$比较大或者比较小的时候仍会出现梯度消失的现象。
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.6\linewidth]{figures/tanh.png}
-\caption{$tanh$激活函数示意图}
-\label{fig:tanh}
-\end{figure}
+$Tanh$函数在$x$比较大或者比较小的时候仍会出现梯度消失的现象。
+
 
 \subsubsection{$ReLU$ 函数}
 
@@ -101,18 +95,18 @@ ReLU(x)=\max\{0,x\}
 $ReLU$的主要缺陷是在$x<0$时，
 梯度为0，函数对这部分的卷积结果无法响应，
 因此输入一旦变为负值将再无法影响网络的训练。
-这一缺陷可以通过$Parametric~Rectified~Linear~Unit(PReLU)$\cite{he2015delving}来改善。
+这一缺陷可以通过$Parametric~Rectified~Linear~Unit~(PReLU)$\cite{he2015delving}来改善。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.6\linewidth]{figures/relu.png}
-\caption{$ReLU$激活函数示意图}
+\includegraphics[width=0.7\linewidth]{figures/RELU.pdf}
+\caption{$ReLU$激活函数和其梯度示意图}
 \label{fig:relu}
 \end{figure}
 
 \subsection{池化层}
 
-池化层一般采用平均池化($average-pooling$)或最大池化($max-pooling$)。
-类似于卷积操作，池化层选择一个滑动窗口，取窗口中像素值最大值（最大池化层）或者平均值（平均池化层）作为池化操作的输出，可以对特征进行降维。从操作的角度来讲，池化层可以看做是一个用$p-$范数($p-norm$)作为非线性映射的“卷积”操作，当$p$趋近于正无穷时就是最大池化层。
+池化层一般采用平均池化（$average-pooling$）或最大池化（$max-pooling$）。
+类似于卷积操作，池化层选择一个滑动窗口，取窗口中像素值最大值（最大池化层）或者平均值（平均池化层）作为池化操作的输出，可以对特征进行降维。从操作的角度来讲，池化层可以看做是一个用$p-$范数（$p-norm$）作为非线性映射的“卷积”操作，当$p$趋近于正无穷时就是最大池化层。
 与卷积层不同的是，池化层不需要设定参数，
 使用时只需要指定池化层类型、池化操作的步长和核的大小即可。
 从图像处理的角度来看，池化层可以被视为一种“降采样”，
@@ -157,7 +151,7 @@ $\hat{y_i}$表示模型的输出，
 
 \subsubsection{随机梯度下降}
 
-随机梯度下降算法($Stochastic~Gradient~Descent,\mbox{简称}~\mbox{SGD}$)是神经网络中最基础的优化算法，它根据误差的一阶梯度信息对参数调整，参数的更新策略可以用公式\eqref{eq:sgd}表示，
+随机梯度下降算法（$Stochastic~Gradient~Descent,\mbox{简称}~\mbox{SGD}$）是神经网络中最基础的优化算法，它根据误差的一阶梯度信息对参数调整，参数的更新策略可以用公式\eqref{eq:sgd}表示，
 \begin{equation}
 \centering
 w=w-\eta \cdot dw
@@ -172,7 +166,7 @@ SGD算法收敛效果稳定，但是收敛速度较慢，并且，权值容易�
 \subsubsection{基于动量的随机梯度下降法}
 
 受物理学研究的启发，
-发展出了基于动量\cite{qian1999momentum}($momentum$)的随机梯度下降算法，
+发展出了基于动量\cite{qian1999momentum}（$Momentum$）的随机梯度下降算法，
 该算法通过前几轮训练积累的“动量”信息辅助参数更新，更新策略用公式\eqref{eq:momentum}表示，
 \begin{equation}
 \begin{aligned}
@@ -193,7 +187,7 @@ $\eta$为学习率，
 
 \subsubsection{RMSProp算法}
 
-RMSProp($root~mean~square~prop$)算法\cite{hinton2012neural}可以针对学习率做动态的调整。这一算法的更新策略如\eqref{eq:rmsprop}所示，
+RMSProp（$Root~Mean~Square~Prop$）算法\cite{hinton2012neural}可以针对学习率做动态的调整。这一算法的更新策略如\eqref{eq:rmsprop}所示，
 \begin{equation}
 \begin{aligned}
 \centering
@@ -249,12 +243,12 @@ Adam\cite{kingma2014adam}算法用梯度的一阶矩估计和二阶矩估计动�
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1.0\linewidth]{figures/VGG.png}
+\includegraphics[width=1.0\linewidth]{figures/VGG.pdf}
 \caption{VG-11模型结构示意图}
 \label{fig:VGG}
 \end{figure}
 
-在训练阶段，我们使用$dropout$方法来预防过拟合。
+在训练阶段，我们使用$Dropout$方法来预防过拟合。
 $Dropout$在向前传播时对神经元以一定的概率随机失活，这种失活只是暂时的，
 每一轮训练时，都会以固定的概率重新失活神经元。
 本文中$Dropout$失活概率取0.5。
@@ -276,13 +270,13 @@ $Dropout$在向前传播时对神经元以一定的概率随机失活，这种�
 接着我们使用双三次插值法将其放大为$224\times 224$。
 
 
-\section{实验结果和分析}
+\section{实验结果与分析}
 
 本节将展示使用本章算法进行缺陷检测得到的结果，并将其与传统算法进行对比。
-本文实验环境系统为ubuntu 16.04，
+本文实验环境系统为Ubuntu 16.04，
 使用的
-torch版本为0.3.1，
-torchvision版本为0.1.9。
+Torch版本为0.3.1，
+TorchVision版本为0.1.9。
 实验计算机CPU为12核 Inter(R) Core(TM) i7-5820k @ 3.30GHz，
 GPU为Tesla K40c，显存大小为11439M。
 
@@ -412,7 +406,7 @@ $REC$值越高，$MDR$值越低，
 \caption{VGG模型最终结果表}
 \label{tab:zuizhongjieguo}
 \end{table}
-表\ref{tab:zuiyoujieguo}中，展示了每个模型训练过程中得到的最优结果。
+表\ref{tab:zuiyoujieguo}中，展示了每个模型训练过程中得到的最优结果,
 表\ref{tab:zuizhongjieguo}中展示了每个模型收敛后的结果。
 从结果中可以看到，最终收敛后的参数往往在测试集上表现并非最好，
 我们选择测试集上表现最好的模型参数作为最终参数。

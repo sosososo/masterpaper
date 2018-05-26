@@ -10,25 +10,26 @@
 \section{硬件设计与实现}
 \label{section:yingjianshebeidesheji}
 
-为了精确地计算表面法线，算法要求获取特定角度光源下的零件表面照片，为此本文设计了一款精密零件照片捕捉设备，该设备通过良好的物理设计和软件驱动，可以完成对算法所需数据的采集。整个设备的硬件结构如图\ref{zheguangmokuai}所示，主要包含遮光模块、平台模块、灯光模块、拍照模块和控制模块五个模块，每个模块的设计和功能介绍如下：
+为了精确地计算表面法线，算法要求获取特定角度光源下的零件表面照片，为此本文设计了一款精密零件照片捕捉设备，该设备通过良好的物理设计和软件驱动，可以完成对算法所需数据的采集。整个设备的硬件结构如图\ref{fig:zheguangmoku}所示，主要包含遮光模块、平台模块、灯光模块、拍照模块和控制模块五个模块，每个模块的设计和功能介绍如下：
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.6\textwidth]{figures/zheguangmokuai.png}
-\caption{设备结构图}\label{zheguangmokuai}
+\includegraphics[width=0.5\linewidth]{figures/zheguangmokuai.pdf}
+\caption{硬件设计图}
+\label{fig:zheguangmoku}
 \end{figure}
 \begin{enumerate}
 \item 遮光模块：为了捕捉特定入射角度光源下的照片，我们需要提供一个屏蔽其它光源的拍摄环境，
-为此我们将整个设备设计在一个（$60cm\times 60cm\times 110cm$）的遮光箱（如图\ref{zheguangmokuai}内标记Shading box部分）内。
+为此我们将整个设备设计在一个（$60cm\times 60cm\times 110cm$）的遮光箱内。
 为使设备稳固和耐用，遮光箱用金属材质搭建框架，并在框架上面覆盖了黑色塑料板，形成一个密闭的环境。
 同时，为了避免遮光箱箱体材质对光的反射，影响灯光环境，我们使用一种黑绒布材料覆盖在遮光箱内部，该材料具有吸光的特性，能削弱遮光箱本身材质对光照环境的影响。
 \item
 平台模块：由一块固定在距遮光箱底部
 $10cm$处的一个白色亚力克匀光板组成，用来放置需要扫描的零件，
-在应用到零件生产流水线上时，可以用一个传送带（图\ref{zheguangmokuai}中Transparent conveyor belt）替代。
+在应用到零件生产流水线上时，可以用一个传送带替代。
 该匀光板放置物体的一面为磨砂面，反射效果较弱，可以削弱对入射光的反射，减小对光照环境的影响。
 \item
 灯光模块：该模块为拍摄提供特定的灯光环境，环境要求灯光为满足一定入射角度的平行光源，
-同时尽可能的避免散射和衰减。此模块包括周围四组光源（图\ref{zheguangmokuai}中Middle light units）、顶部光源（图\ref{zheguangmokuai}中Top light units）以及覆盖在光源上的的CPL滤光膜。所有的光源均由一组LED灯带组成，既保证了光源质量，又节约了成本。
+同时尽可能的避免散射和衰减。此模块包括周围四组光源组、顶部光源组以及覆盖在光源上的的CPL滤光膜。所有的光源组均由LED灯带组成，既保证了光源质量，又节约了成本。
 周围四组光源设置在平台模块上$20cm$处的遮光箱四壁，
 通过一个金属槽卡住LED灯带，分别从放置物体平台的前（东）、后（西）、左（南）、右（北）
 四个方向以${45}^{\circ}$角照射平台中央。拍摄时，当东部灯组亮起，零件照片呈现出上半部分较亮，下半部分较暗的特点，西部灯光组亮起则与之相反；南部灯组亮起，捕获的照片左半部分会较亮，右半部分较暗，北部灯组亮起来时呈相反特点。顶部灯组由四条LED灯带组成，固定在相机镜头下$3cm$处，垂直照向平台中心。CPL滤光膜具有选择性通过某个方向光线的功能，配合数码相机的偏光镜头能起到滤除高光的作用。我们在所有的灯带上均放置了滤光膜，搭配相机的偏光镜使用，滤除金属零件表面高光。
@@ -100,13 +101,14 @@ $Image\_T1$。
 白平衡算法大都基于这两个理论，
 比如Xiaoqiang Li\cite{10.1007/978-3-642-37149-3_38}提出的算法就是对灰度世界算法的改进，
 Lam 和Edmun Y\cite{lam2005combining}将这两个理论结合，提出了一种自动白平衡算法。
-
+\par
 本文白平衡校正算法基于Weng\cite{weng2005novel}等人提出的校正算法，
 并在此基础上作出优化。该算法分为两步，首先检测白点，接着用白点调整色温。
 在校正前，我们首先计算图片$YC_b C_r$颜色空间的值，
 计算公式如\eqref{eq:rgb2gray}所示，其中$R$、$G$、$B$分别代表原来$RGB$
 色彩空间中三个通道的值，$Y$、$C_b$、$C_r$分别代表了$YC_b C_r$空间各个通道的值。
-\begin{equation}\label{eq:rgb2gray}
+\begin{equation}
+\label{eq:rgb2gray}
 \begin{split}
 Y=(0.256\ast R)+ (0.504\ast G)+(0.098\ast B)+16\\
 C_b=-(0.148\ast R)-(0.291\ast G)+(0.439\ast B)+128\\
@@ -127,7 +129,8 @@ C_r=(0.439\ast R)-(0.368\ast G)-(0.071\ast B)+128
 我们只需要排除白点候选中的离群点即可得到最终结果。
 这种优化有三点好处：一是无需手动设定参数；二是大大降低了白点统计的复杂度，提高了速度；三是白卡中的白色区域为已知真实白色，要比论文中定义的$near-white$区域更准确。
 确定白点之后，算法使用Von Kries模型\cite{macadam1970sources}来调整图片。该模型首先计算通道增益，通道增益$R_{gain}$,$ G_{gain}$, $B_{gain}$可以根据公式\eqref{eq:gain}计算，
-\begin{equation}\label{eq:gain}
+\begin{equation}
+\label{eq:gain}
 \begin{split}
 R_{gain}=Y_{max}/R_{avew}\\
 G_{gain}=Y_{max}/G_{avew}\\
@@ -136,7 +139,8 @@ B_{gain}=Y_{max}/B_{avew}
 \end{equation}
 其中，$R_{avew}$、$G_{avew}$、$B_{avew}$分别代表白点集$Red$、$Green$、$Blue$三个通道像素值的均值，$Y_{max}$表示整张图片的最大亮度值。
 接着使用公式\eqref{eq:brithnessadjust}对照片进行调整，
-\begin{equation}\label{eq:brithnessadjust}
+\begin{equation}
+\label{eq:brithnessadjust}
 \begin{split}
 R_{gain}=Y_{max}/R_{avew}\\
 G_{gain}=Y_{max}/G_{avew}\\
@@ -173,10 +177,10 @@ Hao Yu、Jian Wang\cite{yu2009color}等人则选择在Lab空间对颜色进行�
 
 \subsection{畸变校正}
 
-由于相机成像镜头固有的透镜效应，相机成像时会对真实的景象产生一种透视失真，被称为镜头畸变。随着镜头制造工艺的不断发展，人们通过不断改善镜头材质，优化光学设计，试图消除这种畸变，然而即使最先进的材质，最完善的设计，也难以完全消除畸变，必须借助镜头畸变校正算法进一步优化。
+由于相机成像镜头固有的透镜效应，相机成像时会对真实的景象产生一种透视失真，被称为镜头畸变。随着镜头制造工艺的不断发展，人们通过不断改善镜头材质，优化光学设计，试图消除这种畸变，然而即使最先进的材质，最完善的设计，也难以完全消除它，必须借助镜头畸变校正算法进一步优化。
 
-在计算机视觉领域，畸变校正算法已经发展的非常成熟，其中最成功的是张正友教授提出的张氏标定法\cite{zhang2000flexible}，该方法现已被广泛应用于相机标定和畸变校正中。
-Weng J,Cohen P\cite{weng1992camera}等人提出了先估计参数后迭代校正的两步校正方法，
+在计算机视觉领域，畸变校正算法已经发展的非常成熟。
+Weng J、Cohen P\cite{weng1992camera}等人提出了先估计参数后迭代校正的两步校正方法，
 Heikkila J 和Silven O\cite{heikkila1997four}等人则在Weng J等人算法的基础上进行扩展，
 将两步扩展到四步，
 使用额外的步骤补偿镜头的圆形特性引起的图像失真问题。
@@ -190,8 +194,8 @@ Heikkila J 和Silven O\cite{heikkila1997four}等人则在Weng J等人算法的�
 畸变校正算法首先获取畸变系数，计算畸变系数对图像的作用矩阵，
 通过对照片进行畸变作用相反的变换，得到消除畸变的矫正图像。
 
-本文采用张氏标定法对相机标定，
-算法只关注径向畸变。一般来讲，相机径向畸变较小，可以用主点（principle point）周围的泰勒级数展开的前几项进行描述，张氏标定法选择前两项来描述。
+本文采用张氏标定法\cite{zhang2000flexible}对相机标定，获取相机参数。
+算法只关注径向畸变，一般来讲，相机径向畸变较小，可以用主点（principle point）周围的泰勒级数展开的前几项进行描述，张氏标定法选择前两项来描述。
 首先我们用待标定的相机拍摄多张包含棋盘格的照片，
 拍摄时保证相机位置不变，每张棋盘格角度和位置各不相同，假设我们得到n张照片，接着
 分别提取n张照片中棋盘格的$m$个角点，
@@ -218,26 +222,25 @@ $(p_{0},q_{0})$
 已有的光照补偿算法如
 \cite{贾灵芝2008基于自适应光线补偿的人脸检测算法,chen2006illumination,ruiz2008illumination,malassiotis2005robust,zheng2008intra,wiegand2003overview,tan2006intra,tan2007intra}中所提到的离散余弦变换、局部自适应模板匹配等从不同的角度对光照进行补偿，本文参考了这些方法，通过模板和函数方法进行光线补偿。
 
-我们首先统计了不同颜色和不同灰度的材质在实验环境中所表现出来的光线损失情况，
-结果如图\ref{fig:guangxiansunshi}所示,其中$(a)$、$(b)$、$(c)$、$(d)$分别代表了不同材质的光线损失图，从图中可以看出不同材质的光线损失程度不同，并且，往往材质亮度越低，光线损失越小，亮度越高，光线损失越大。
+我们首先统计不同亮度材质在实验环境中所表现出来的光线损失情况，
+结果如图\ref{fig:guangxiansunshi}所示,其中$(a)$、$(b)$、$(c)$、$(d)$分别代表了不同亮度材质的光线损失图，从图中可以看出不同亮度材质的光线损失程度不同，并且往往材质亮度值越低，光线损失越小，亮度值越高，光线损失越大。
 
 \begin{figure}[htbp]
 
-\begin{minipage}{0.48\linewidth}
+\begin{minipage}{0.5\linewidth}
 \centerline{\includegraphics[width=1\linewidth]{figures/gaungxiansunshia.png}}
 \centerline{(a)}
 \end{minipage}
-\begin{minipage}{0.48\linewidth}
+\begin{minipage}{0.5\linewidth}
 \centerline{\includegraphics[width=1\linewidth]{figures/gaungxiansunshib.png}}
 \centerline{(b)}
 \end{minipage}
 
-
-\begin{minipage}{0.48\linewidth}
+\begin{minipage}{0.5\linewidth}
 \centerline{\includegraphics[width=1\linewidth]{figures/gaungxiansunshic.png}}
 \centerline{(c)}
 \end{minipage}
-\begin{minipage}{0.48\linewidth}
+\begin{minipage}{0.5\linewidth}
 \centerline{\includegraphics[width=1\linewidth]{figures/gaungxiansunshid.png}}
 \centerline{(d)}
 \end{minipage}
@@ -246,32 +249,31 @@ $(p_{0},q_{0})$
 \label{fig:guangxiansunshi}
 \vspace{-3mm}
 \end{figure}
-{}
-为了直观的展现光线损失和光源方向的关系，我们分别统计了照片在平行光源方向上的的衰减情况和垂直光源方向上的衰减情况，结果分别如图\ref{fig:guangxiansunshipingxing}和图\ref{fig:guangxiansunshichuizhi}所示，图中横轴表示统计方向上的位置，纵轴表示该位置上的亮度统计值，
-图中不同颜色的曲线$(a)$、$(b)$、$(c)$、$(d)$分别代表了不同材质的损失曲线，
-这些材质正是图\ref{fig:guangxiansunshi}中对应的材质，
-$(E)$、$(W)$、$(N)$、$(S)$分别代表了东、西、北、南四个方向光源下的结果。
+为了分析光线损失和光源方向的关系，我们分别统计了照片在平行光源方向上的的衰减情况和垂直光源方向上的衰减情况，结果分别如图\ref{fig:guangxiansunshipingxing}和图\ref{fig:guangxiansunshichuizhi}所示。图中横轴表示统计方向上的位置，纵轴表示该位置上的亮度统计值，
+图中不同颜色的曲线$(a)$、$(b)$、$(c)$、$(d)$分别代表了不同亮度材质的损失曲线，
+这些材质正是图\ref{fig:guangxiansunshi}中对应材质，
+$(e)$、$(w)$、$(n)$、$(s)$分别代表了东、西、北、南四个方向光源下的统计结果。
 从图中可以明显看出，光线衰减在垂直光源方向上非常弱，但在平行光源方向上极为明显，并呈现出一种线性衰减的趋势。
 
 \begin{figure}[htbp]
 
 \begin{minipage}{0.48\linewidth}
 \centerline{\includegraphics[width=1\linewidth]{figures/guangxianshuaijianduibituchuzhie.png}}
-\centerline{(E)}
+\centerline{(e)}
 \end{minipage}
 \begin{minipage}{0.48\linewidth}
 \centerline{\includegraphics[width=1\linewidth]{figures/guangxianshuaijianduibituchuzhiw.png}}
-\centerline{(W)}
+\centerline{(w)}
 \end{minipage}
 
 
 \begin{minipage}{0.48\linewidth}
 \centerline{\includegraphics[width=1\linewidth]{figures/guangxianshuaijianduibituchuzhin.png}}
-\centerline{(N)}
+\centerline{(n)}
 \end{minipage}
 \begin{minipage}{0.48\linewidth}
 \centerline{\includegraphics[width=1\linewidth]{figures/guangxianshuaijianduibituchuzhis.png}}
-\centerline{(S)}
+\centerline{(s)}
 \end{minipage}
 
 \caption{光线衰减统计图（平行光源方向）}
@@ -308,34 +310,40 @@ $(E)$、$(W)$、$(N)$、$(S)$分别代表了东、西、北、南四个方向光
 
 在我们的实验环境中，相机和光源均固定不变，因此，我们可以在扫描材质前先计算一组光照补偿模板，然后针对不同的材质作出适当调整进行光线补偿。
 因为我们只需对光线信息进行调整，并不涉及照片的色彩信息，
-所以我们直接在亮度上进行计算，并且模板中也只保留亮度信息。
+所以我们直接在亮度上进行计算，模板中也只保留亮度信息。
 图像的亮度有多种表示方法，为了和其它步骤统一，我们使用$YC_b C_r$空间中的
 $Y$分量代表亮度。
 
-我们首先拍摄一组用来计算补偿模板的照片，这时相机直接拍摄匀光板，匀光板具有良好的光源分散性质，不容易造成光线损失。拍摄时，我们首先拍摄顶部光源下的照片，并将其作为没有损失的照片，记为
+匀光板具有良好的光源分散性质，不容易造成光线损失，因此我们直接拍摄匀光板，用得到的照片来计算补偿模板。
+首先我们拍摄顶部光源下的照片，将其作为没有光线损失的照片，记为
 $Base$，
 之后依次拍摄东部灯光组、西部灯光组、南部灯光组和北部灯光组下的待校正照片，
-分别标记为${Adjust}_E$、${Adjust}_W$、${Adjust}_S$、${Adjust}_N$，
+分别标记为${Adjust}_E$、${Adjust}_W$、${Adjust}_S$、${Adjust}_N$。
 为了方便计算和节省存储空间，我们只保留他们的亮度值，
 分别记为${Base}^L$、${Adjust}_E^L$、${Adjust}_W^L$、${Adjust}_S^L$、${Adjust}_N^L$。
-接着我们使用${Base}^L$减去各个方向上的亮度值，得到不同方向光源上相对于Base的光线衰减信息，
+接着我们用${Base}^L$减去各个方向上的亮度值，
+得到不同方向光源上相对于Base的光线衰减信息。
 为了保证补偿信息的非负性，我们为整体亮度增加一个偏差$\alpha$，
-偏差的的小为${Base}^L$与${Adjust}_E^L$、${Adjust}_W^L$、${Adjust}_S^L$、${Adjust}_N^L$对应差值最小的$0.1\%$的均值。
+偏差值为${Base}^L$与${Adjust}_E^L$、${Adjust}_W^L$、${Adjust}_S^L$、${Adjust}_N^L$对应差值最小的$0.1\%$的均值。
 如果结果仍为负0，我们直接将其置为0，认为此处没有损失，
-最终补偿计算方法如公式\eqref{eq:guangxianbuchang}所示，
+最终补偿计算方法如公式\eqref{eq:guangxianbuchang}所示。
 \begin{equation}\label{eq:guangxianbuchang}
 {Comp}_d=\max ({0,{Base}^L-{Adjust}_d^L+\alpha }),\quad d\in \{E,W,S,N \}
 \end{equation}
-其中${Comp}_d$表示对应方向光源下的补偿信息，$\alpha$表示偏差，计算方法如公式\eqref{eq:paincahzhijisuan}所示，
-其中$NMIN$表示集合对应差值的最小的$N_{min}$个值的集合，$N_{min}=N\times 0.001$，N表示图片的像素值总数。
+其中${Comp}_d$表示对应方向光源下的补偿信息，$\alpha$表示偏差，计算方法如公式\eqref{eq:paincahzhijisuan}所示。
+其中$NMIN$表示对应差值的最小的$N_{min}$个值的集合，$N_{min}=N\times 0.001$，N表示图片像素总数。
 \begin{equation}\label{eq:paincahzhijisuan}
 \alpha =\frac {1}{N_{min}} \sum_{i}^{N_{min}}{Y_i},\quad Y_i\in NMIN
 \end{equation}
 
-考虑到不同亮度材质的光线损失程度不同，我们在校正时会对模板信息做相应调整。
-根据前面的统计规律，我们使用线性函数对模板进行调整。当需要进行光线补偿时，记不同方向光源下的照片为
+考虑到不同亮度材质的光线损失程度不同，
+我们在校正时对模板信息做相应调整。
+根据前面的统计规律，
+我们使用线性函数对模板进行调整。
+当需要进行光线补偿时，记不同方向光源下的照片为
 ${Image}_d$,其中$d \in \{E,W,S,N\}$，
-在顶部光源下拍摄的照片为${Image}_T$，我们用公式\eqref{eq:guangxianbuchangsuanfa}计算对应的补偿，
+在顶部光源下拍摄的照片为${Image}_T$。
+我们用公式\eqref{eq:guangxianbuchangsuanfa}计算对应的补偿，
 \begin{equation}
 \label{eq:guangxianbuchangsuanfa}
 {CImage}_d^L={Image}_d^L+\lambda*{Comp}_d*(avg({Image}_T^L)/avg({Base}^L))
@@ -348,14 +356,15 @@ $\lambda$为补偿强度参数，表示光线补偿的强度，
 \subsection{法线计算}
 
 
- Ryan Clark\cite{zarria.net}提出了一种在没有光线损失情况下的计算方法，
- 他使用photoshop工具模拟了算法，并没有将该算法系统化，算法所得到的法线信息在细节和整体上都存在极大问题。
+ Ryan Clark\cite{zarria.net}提出了一种没有光线损失情况下的法线计算方法，
+ 他使用Photoshop工具模拟了算法，并没有将该算法系统化。
+ 但是算法所得到的法线信息在细节和整体上都存在极大问题，
  并且，算法没有考虑光线损失对结果的影响。
- 本文受该算法启发，利用光照反射原理计算法线，不仅此基础上增加了对光线损失的补偿，而且利用不同方向光源下的照片来计算，取得了更好地结果。
+ 本文受该算法启发，利用光照反射原理计算法线，此外，我们增加了对光线损失的补偿，而且利用了不同方向光源下的照片信息，取得了更好地结果。
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.8\linewidth]{figures/guangxianfanshetu.png}
+\includegraphics[width=0.6\linewidth]{figures/guangxianfanshetu.pdf}
 \caption{光线反射原理图}
 \label{fig:guangxianfanshetu}
 \end{figure}
@@ -365,7 +374,7 @@ $MN$表示物体表面，
 实线部分$MO$
 为真实表面，
 $ON$
-是表面的延长，是为了方便观察和理解，
+为表面的延长，是为了方便观察和理解，
 $\overrightarrow{AO}$为入射光，
 $\overrightarrow{OB}$表示反射光，
 $ON_f$
@@ -392,22 +401,22 @@ $\angle {BON}_f=2\theta+\alpha-90$
 \label{eq:guangxianqiangdu}
 I_{ref}=\lambda I* \cos (2\theta +\alpha-90)
 \end{equation}
-其中，$\lambda$表示光线反射率，
+其中，$\lambda$表示光线反射率。
 当光源相同时，光线反射率不变，
-$\alpha$已知，为
+又$\alpha$已知，为
 $45^{\circ}$，
 根据公式\eqref{eq:guangxianqiangdu}，理论上反射到相机中的光照强度只有材质表面的倾斜角度有关，
 光照强度反应在拍摄图片的亮度信息中，
 因此拍摄照片的亮度信息必然只与材质本身的倾斜角度有关，
-即亮度信息只和材质的法线有关，
+即亮度信息只和材质的法线有关。
 根据这一推论，
-我们可以使用四个不同方向光源下的照片来计算物体的法线。
+我们可以使用不同方向光源下的照片来计算物体的法线。
 
 我们首先获取不同方向光源下的照片
 $Image\_E1$、$Image\_W1$、$Image\_N1$、$Image\_S1$，
 使用光线补偿算法对其进行光线补偿，并得到其亮度信息，
 记为
-${Image}_E^L$、${Image}_W^L$、${Image}_N^L$、${Image}_S^L$，
+${Image}_E^L$、${Image}_W^L$、${Image}_N^L$、${Image}_S^L$。
 接着我们创建两个新的三通道图
 $NorthWest$和$SouthEast$
 用来保存数据，其中
@@ -422,7 +431,7 @@ ${Image}_S^L$，
 接着我们将$NorthEast$的色阶调整到$[0.0-0.5]$，
 将SouthEast的色阶调整到$[0.5-1.0]$，
 调整色阶的计算方法如公式\eqref{eq:tiaozhengsejie}所示，
-其中$p$表示图像的像素值，
+其中$p$为图像的像素值，
 $a$为调整后色阶的上界，$b$为调整后色阶的下界，${p}^{'}$为调整后的像素值。
 \begin{equation}
 \label{eq:tiaozhengsejie}
@@ -437,7 +446,8 @@ $a$为调整后色阶的上界，$b$为调整后色阶的下界，${p}^{'}$为�
 \label{eq:hunhetuxiang}
 Normal\_Temp1=2* NorthWest* SouthEast
 \end{equation}
-这一法线图中包含了$R$和$G$通道的信息，由法线的归一化性质，我们可以根据R和G通道的值来计算B通道的值，计算方法如公式\eqref{eq:btongdaojisuan}所示，
+$Normal\_Temp1$中包含$R$和$G$通道的信息，
+由法线的归一化性质，我们可以根据R和G通道的值来计算B通道的值，计算方法如公式\eqref{eq:btongdaojisuan}所示，
 其中$r$表示R通道像素值，$g$表示$G$通道的像素值，$b$表示$B$通道的像素值。
 \begin{equation}
 \label{eq:btongdaojisuan}
@@ -448,7 +458,7 @@ b=2.0* \sqrt{1.0-{(r-0.5)}^2+{(g-0.5)}^2}-1.0
 可以得到有高光情况下的法线图$Normal\_Temp2$。
 $Normal\_Temp1$滤除了高光，光线信息较弱，
 细节部分表现较弱，但是整体结果较好，
-$Normal\_Temp2$保留了高光信息，光线信息较强，细节表现明显，但部分区域容易出现法线的跳跃现象，因此我们使用alpha融合算法融合这两张法线图，得到最终法线，融合方法如公式
+$Normal\_Temp2$保留了高光信息，光线信息较强，细节表现明显，但部分区域容易出现法线的跳跃现象。因此我们使用alpha融合算法融合这两张法线图，得到最终法线，融合方法如公式
 \eqref{eq:faxianronghe}所示。
 \begin{equation}
 \label{eq:faxianronghe}
@@ -473,7 +483,7 @@ Normal=(Normal\_Temp1+Normal\_Temp2)* 0.5
 \label{fig:faxianjieguotu}
 \end{figure}
 
-\section{实验结果和分析}
+\section{实验结果与分析}
 
 本节首先介绍我们的硬件设备成品，接着介绍法线提取结果并与其他相关工作对比。
 由于本章设计的法线提取算法不仅可以用于提取零件表面法线，还可以被扩展到任意材质的法线提取中，因此我们将它独立成一个模块，用于提取材质法线图，本节不仅包含零件表面法线提取结果，还包含了对其它材质的法线提取结果。
@@ -484,21 +494,21 @@ Normal=(Normal\_Temp1+Normal\_Temp2)* 0.5
 我们给出了实现，并将其应用到了实际生产中。
 设备由5个模块组成，这些模块被封装到一个白色的铝合金外壳中，如图\ref{fig:yingjianjieguo}所示，
 $(a)$展示了设备的整体外观，
-为了移动方便我们在设备底部安装了四个滚轮，
+为了移动方便我们在设备底部安装了四个滚轮。
 设备顶部可以打开，
 如
 图\ref{fig:yingjianjieguo}中$(b)$所示，打开之后可以看到固定在顶部的相机、滤光镜和顶部灯光组，
-图\ref{fig:yingjianjieguo}中$(c)$展示了更清楚的结果，
+图\ref{fig:yingjianjieguo}中$(c)$展示了更清楚的结果。
 设备中间部分如
 图\ref{fig:yingjianjieguo}中$(a)$所示，
-保留了一个门，门内
+设计了一个门，用于将需要扫描的物体放在平台模块上，
+门内
 如$(d)$和$(e)$
-所示，可以看到摆放材质的平台和不同方向的灯光组，
-需要扫描的材质放在这个平台中间，灯光组以
+所示，可以看到摆放材质的平台和不同方向的灯光组，灯光组以
 ${45}^{\circ}$
-照向平台中间，从
-图\ref{fig:yingjianjieguo}中$(b)$、$(c)$、$(d)$、$(e)$中都可以看到内部的黑色绒布，
-这些绒布有吸光性质，可以减少了对光照的影响。
+照向平台中间。
+从图\ref{fig:yingjianjieguo}中$(b)$、$(c)$、$(d)$、$(e)$中都可以看到内部的黑色绒布，
+这些绒布有吸光性质，可以减少对光照的影响。
 
 \begin{figure}[htbp]
 \centering
@@ -509,9 +519,10 @@ ${45}^{\circ}$
 
 \subsection{法线提取结果}
 
-在计算法线之前，我们先对相机进行白平衡校正、颜色校正、畸变校正以及光线补偿，保存它们的参数，用来对之后拍摄的照片校正。随着时间的推移，不论是相机还是光源都会有细微的变化，
+在计算法线之前，我们先对相机进行白平衡校正、颜色校正、畸变校正以及光线补偿，保存它们的参数，用来对之后拍摄的照片校正。
+随着时间的推移，不论是相机还是光源都会发生细微变化，
 为了保证参数的准确性，
-在实际应用中我们定期的对相机进行这些校正，
+在实际应用中我们定期的对相机重复这些校正，
 更新校正参数。经验表明，至少三个月需要对设备重新校正一次。
 
 获得校正参数之后，我们首先使用设备拍摄不同光源下的零件照片，
@@ -520,9 +531,9 @@ ${45}^{\circ}$
 接着使用程序控制硬件设备获取所需照片。
 获取的过程分为两步，
 第一步相机使用滤光镜，
-程序分别控制亮起顶部灯光组、东部灯光组、西部灯光组、北部灯光组、南部灯光组并拍摄照片，并对照片进行校正，
+程序分别控制亮起顶部灯光组、东部灯光组、西部灯光组、北部灯光组、南部灯光组并拍摄照片，并对照片进行校正和补偿，
 保存结果为$Image\_T1$、$Image\_E1$、$Image\_W1$、$Image\_N1$、$Image\_S1$；
-第二步中程序控制电机转动移开滤光镜，重复第一步中的步骤，对零件拍照和校正，
+第二步中程序控制电机转动移开滤光镜，重复第一步中的步骤，对零件拍照、校正和补偿，
 并存储结果为$Image\_T2$、$Image\_E2$、$Image\_W2$、$Image\_N2$、$Image\_S2$。
 最后，使用这些数据运行法线提取算法，即可得到零件法线，
 法线图结果如图\ref{fig:faxianjieguotu}所示。
@@ -542,14 +553,16 @@ ${45}^{\circ}$
 \label{fig:faxianjieguoduibi}
 \end{figure}
 我们首先得到他们对某一材质的法线提取结果，
-然后使用我们拥有的最相似的材质提取法线并对比，结果如图\ref{fig:faxianjieguoduibi}
+然后使用我们拥有的最相似的材质提取法线并对比。
+结果如图\ref{fig:faxianjieguoduibi}
 所示，其中
 $(a)$表示Vizoo3D xTex得到的法线结果，
-$(b)$为我们提取的法线结果，从图中可以看出这组法线都比较平整，
+$(b)$为本文算法提取的法线结果，
+从图中可以看出这组法线都比较平整，
 不存在褶皱等问题，
 但是
 $(a)$中的法线信息在中心处要比边缘部分模糊，
-我们推测这可能是由于光线不均或光线损失导致，
+我们推测这可能是光线不均或光线损失导致，
 而我们在法线计算过程中考虑了这一问题，因此我们的结果可以在不同区域保持一致。
 图\ref{fig:faxianjieguotu}中展示了我们提取的其他材质的法线图，
 其中$(a)$、$(b)$、$(c)$、$(d)$分别代表了不同材质的法线图，

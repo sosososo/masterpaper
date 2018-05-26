@@ -156,11 +156,11 @@ Haar-like特征能反应图像的灰度变化，
 最早由Papageorgiou等人提出来应用于人脸检测，
 之后Viola和Jones\cite{viola2001rapid}将其扩展为3种类型4种形式。
 Haar-like特征的四种形式分为边缘特征、线性特征、中心特征和对角线特征，
-特征模板分别如图\ref{fig:haar-like}中$A$、$B$、$C$、$D$所示，
+特征模板分别如图\ref{fig:haar-like}中$(a)$、$(b)$、$(c)$、$(d)$所示，
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1.0\linewidth]{figures/haarlike.png}
-\caption{haar-like特征类型示意图}
+\includegraphics[width=1.0\linewidth]{figures/haar-like.pdf}
+\caption{Haar-like特征类型示意图}
 \label{fig:haar-like}
 \end{figure}
 模板内有白色和黑色两种类型的矩形，
@@ -175,7 +175,7 @@ Haar-like特征的四种形式分为边缘特征、线性特征、中心特征�
 \subsection{图像梯度}
 \label{subsection:tidu}
 
-在数学中，梯度(Gradient)是一个具有大小和方向的矢量，在
+在数学中，梯度（Gradient）是一个具有大小和方向的矢量，在
 计算机视觉领域中则把梯度的模简称为梯度。
 对于一副图像，我们可以将其看成二维离散函数，图像的梯度就是这个二维离散函数的导数。
 和在数学中的意义相似，
@@ -228,7 +228,7 @@ G= \left| {G}_{y} \right|+ \left| {G}_{y} \right|
 
 \subsection{方向梯度直方图}\label{subsection:tiquzhifangtu}
 
-方向梯度直方图\cite{dalal2005histograms}(HOG)特征最早由法国研究员Dalal在CVPR-2005上提出，
+方向梯度直方图\cite{dalal2005histograms}（HOG）特征最早由法国研究员Dalal在CVPR-2005上提出，
 是计算机视觉领域最常用的特征之一，
 被广泛应用于物体检测中，并取得了良好的效果。
 HOG特征在图像梯度的基础上，
@@ -245,7 +245,7 @@ HOG特征在图像梯度的基础上，
 \label{eq:tidujiaodu}
 \theta (x,y)={\tan^{-1}{\frac{G_x(x,y)}{G_y(x,y)}}}
 \end{equation}
-接着我们将图像分成若干个单元$(cell)$，
+接着我们将图像分成若干个单元（$cell$），
 相邻的$cell$之间不重叠，
 然后我们统计每个$cell$的方向梯度直方图作为其特征。
 在统计时，我们将所有的梯度方向划分为9个$bin$
@@ -254,14 +254,14 @@ HOG特征在图像梯度的基础上，
 梯度方向划分方式如图\ref{fig:tiduhuafentu}所示。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1.0\linewidth]{figures/gradient.png}
+\includegraphics[width=0.8\linewidth]{figures/gradient.pdf}
 \caption{梯度方向划分图}
 \label{fig:tiduhuafentu}
 \end{figure}
 由于局部光照的变化和前背景的变化，
 梯度值的范围可能非常大，
 因此我们需要对梯度值做归一化。
-归一化的方法是把各个$cell$组成空间上连通的区间$(block)$，
+归一化的方法是把各个$cell$组成空间上连通的区间（$block$），
 $block$的特征为其内部所有$cell$
 的特征向量串联的结果，$block$之间可以互相重叠，我们采用滑动窗口来统计每个
 $block$的特征，并将它们串联成图片的特征向量。
@@ -280,10 +280,10 @@ $block$之间有重叠，
 
 \subsection{局部二值模式}
 
-局部二值模式$(LBP)$特征是一种常见的图像局部纹理特征，
+局部二值模式（$LBP$）特征是一种常见的图像局部纹理特征，
 该特征对光照不敏感，
 并且计算方法简单，数据量小，是一种非常实用的特征。
-原始的LBP算子由T. Ojala, M.Pietikäinen和 D. Harwood提出，
+原始的LBP算子由T. Ojala、 M.Pietikäinen和 D. Harwood提出，
 该算子使用像素点的$3\times 3$邻域求LBP特征。
 随后Ojala等人提出了圆形LBP算子\cite{ojala2002multiresolution}，将原始算子的$3\times 3$邻域扩展到任意领域，
 并使其获得了灰度不变性和旋转不变性，
@@ -300,14 +300,14 @@ $3\times 3$的窗口内，
 如图\ref{fig:lbp}所示。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1.0\linewidth]{figures/lbp.png}
+\includegraphics[width=1.0\linewidth]{figures/lbp.pdf}
 \caption{LBP特征提取示意图}
 \label{fig:lbp}
 \end{figure}
 从图\ref{fig:lbp}中可以看出，LBP特征的二进制数是以一定顺序编码得到的，如果图像发生旋转，其值就会发生改变，为此我们主动旋转其邻域，得到一系列LBP值，取其最小值作为最终LBP值，旋转过程如图\ref{fig:lbp2}，这种方法得到的特征值拥有良好的旋转不变性。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1.0\linewidth]{figures/lbp2.png}
+\includegraphics[width=0.8\linewidth]{figures/lbp2.pdf}
 \caption{LBP旋转不变性示意图}
 \label{fig:lbp2}
 \end{figure}
@@ -413,9 +413,9 @@ $Local~magnification~of~curve~slope$表示导数在$[-0.01,0.01]$范围内的结
 \label{subsection:svm}
 
 分类一直是机器学习中非常基础和重要的领域，
-常见的分类模型有随机森林\cite{breiman2001random}(Random Forest,简称 RF)、
-对数几率回归\cite{周志华2016机器学习}(Logistic Regression,简称 LR)、
-贝叶斯分类器以及支持向量机(SVM)等。
+常见的分类模型有随机森林\cite{breiman2001random}（Random Forest,简称 RF）、
+对数几率回归\cite{周志华2016机器学习}（Logistic Regression,简称 LR）、
+贝叶斯分类器以及支持向量机（SVM）等。
 其中，支持向量机作为一种基于统计学习理论的监督学习算法，能在样本数量较少的情况下学习出一个不错的分类决策，
 并且可以使用核函数的方法解决高维问题，
 处理非线性特征的相互作用，
@@ -476,7 +476,7 @@ w^Tx_i+b<-1 ,\quad y_i=-1
 \end{equation}
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1.0\linewidth]{figures/svm.png}
+\includegraphics[width=0.7\linewidth]{figures/svm.pdf}
 \caption{支持向量机示意图}
 \label{fig:svm}
 \end{figure}
@@ -565,7 +565,7 @@ k(x_i,x_j )=\langle \phi (x_i ),\phi (x_j )\rangle=\phi (x_i )^T \phi (x_j )
 常用的核函数有线性核函数、多项式核函数、卡方核函数、高斯核函数、拉普拉斯核函数以及
 $Sigmoid$核函数。
 
-本文SVM算法基于libsvm\cite{CC01a}库实现，该库中预定义了很多基本核函数，可以很方便的使用。在实验中，我们测试了不同的核函数在数据集上的表现，其中高斯核表现最好也最稳定，因此，本文使用高斯核将原始特征空间映射到高维空间。
+本文SVM算法基于LIBSVM\cite{CC01a}库实现，该库中预定义了很多基本核函数，可以很方便的使用。在实验中，我们测试了不同的核函数在数据集上的表现，其中高斯核表现最好也最稳定，因此，本文使用高斯核将原始特征空间映射到高维空间。
 \begin{equation}
 \centering
 k(x_i,x_j )=\exp {⁡(-\frac{\lVert x_i-x_j \rVert ^2}{2\sigma ^2 })}
@@ -608,7 +608,7 @@ k(x_i,x_j )=\exp {⁡(-\frac{\lVert x_i-x_j \rVert ^2}{2\sigma ^2 })}
 \subsection{自适应增强算法}
 \label{subsection:adaboost}
 
-自适应增强算法(Adaboost)是boosting族算法中最具代表性的算法，
+自适应增强算法（Adaboost）是boosting族算法中最具代表性的算法，
 本文用它将不同的SVM模型组合成一个强分类模型。
 Adaboost算法可以组合多个基学习器，
 它首先训练一个基学习器，根据基学习器的表现对样本权重进行调整，
@@ -658,7 +658,7 @@ D_{t+1}(i)=\frac{D_t(i)}{Z_t}\times
 \label{subsection:jilianjianceqi}
 
 在实验过程中，
-人工标记的正样本集$P$(有缺陷的样本的集合)
+人工标记的正样本集$P$（有缺陷的样本的集合）
 是小于负样本集N(没有缺陷的样本集合)的，
 尤其是经过数据增强之后，样本不平衡的问题更加突出。
 因此，在训练模型的时候我们并非直接使用全部训练样本训练模型，
@@ -668,7 +668,7 @@ $|N|$表示集合$N$的元素个数，
 $|P|$表示集合$P$的元素个数，
 $ceil()$表示向上取整函数。
 子集的划分使用随机抽样的方法，
-如图所示，
+如图\ref{fig:db}所示，
 我们首先从$N$中随机无放回的抽取$|P|$个元素组成第一个子集$N_1$，
 接着不断重复这一过程直到得到$k-1$个子集，
 这时$N$中剩余的元素个数为$N_{rmain}$，
@@ -677,25 +677,26 @@ $ceil()$表示向上取整函数。
 我们分别将这$K$个子集和正样本集$P$组成一组子数据集，
 从而得到$k$个正负样本均衡的子数据集。
 对于每个子数据集，我们训练一个强分类器，
-最后使用级联\cite{viola2001rapid}(Cascade)的方式将这些分类器用于缺陷检测。
+最后使用级联\cite{viola2001rapid}（Cascade）的方式将这些分类器用于缺陷检测。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=0.8\linewidth]{figures/db.png}
+\includegraphics[width=0.8\linewidth]{figures/db.pdf}
 \caption{数据集划分型图}
-\label{fig:cascade}
+\label{fig:db}
 \end{figure}
 
 级联分类器流程如图\ref{fig:cascade}所示，首先使用Adaboost组合SVM训练出$K$个不同的强分类器，
-我们将每个强分类器的检测视作一个$stage$，每个$stage$中基分类器的个数为$n$。
-在检测的时候使用滑动窗口的方式将输入图片划分成不同的窗口，首先将所有的窗口用第一个强分类器进行分类，即用$stage~1$分类，
-将所有检测为正常的窗口归到$Reject~sub-windows$中，
+每个强分类器中基分类器的个数为$n$，
+我们将每个强分类器作为图中的分类器。
+在检测的时候使用滑动窗口的方式将输入图片划分成不同的窗口，首先将所有的窗口用第一个强分类器进行分类，
+将所有检测为正常的窗口归到负样本窗口中，
 认为这些窗口为正常零件，
-将所有检测为缺陷的窗口送往下一个$stage$中，
+将所有检测为缺陷的窗口送往下一个分类器中，
 重复这一步骤，
-直到所有的强分类器都检测这一窗口为缺陷，将其视为缺陷，归入$targets$中。
+直到所有的强分类器都检测这一窗口为缺陷，将其视为缺陷，归入正样本中。
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=1.0\linewidth]{figures/cascade.png}
+\includegraphics[width=1.0\linewidth]{figures/cascade.pdf}
 \caption{级联分类器模型图}
 \label{fig:cascade}
 \end{figure}
@@ -705,7 +706,7 @@ $ceil()$表示向上取整函数。
 我们在选择强分类器阈值时，选择能使模型达到最大检测率的最大值。
 
 
-\section{实验结果和分析}
+\section{实验结果与分析}
 \label{section:shiyanjieguo}
 
 本节首先描述实验环境，然后描述实验过程和实验结果。实验结果主要包括两个部分，
@@ -718,8 +719,8 @@ $ceil()$表示向上取整函数。
 ~I7-7700$处理器的计算机，
 该机器的系统为$Win7$,
 处理器内存为$8GB$。
-本文使用的语言主要有matlab\cite{MATLAB:2017}、C++、python等。
-用到的库主要有matlab\cite{MATLAB:2017}、OpenCV\cite{opencv_library}、libsvm\cite{CC01a}等。
+MATLAB\cite{MATLAB:2017}、C++、Python等。
+用到的库主要有MATLAB\cite{MATLAB:2017}、OpenCV\cite{opencv_library}、LIBSVM\cite{CC01a}等。
 
 \subsection{特征提取结果}
 
@@ -730,21 +731,21 @@ $ceil()$表示向上取整函数。
 再使用滑动窗口的方法得到分割图片的特征，这种算法大大加速了整个计算流程。
 
 以梯度特征为例，我们首先计算整幅图像的梯度，
-用矩阵的形式保存梯度信息，
+用矩阵的形式保存梯度信息。
 图片大小用$N\times M$表示，图像中的像素点位置用$(x,y)$表示，
 保存梯度信息的矩阵大小为$N\times M$，
 矩阵中$(x,y)$位置的值代表了对应图片$(x,y)$位置的梯度信息，
 在使用滑动窗口对主表面图进行分割时，只需要选取对应窗口的梯度信息，
 即可得到分割后图片的梯度特征。
 
-我们选择一组数据为例介绍特征提取结果。如图\ref{fig:butogndengguangzhankaitu}所示为该组数据在不同光照条件下拍摄的照片和法线图，
+我们选择一组数据为例介绍特征提取结果。如图\ref{fig:butogndengguangzhankaitu}所示为该组数据在不同光照条件下拍摄的照片和法线图。
 其中$Top$为顶部光源照射时的拍摄照片，可以看到由于金属零件表面高光的原因，照片中只有特别明显的缺陷和划痕才能看到，细节部分被完全掩盖了；
 $East$、$West$、$South$、$North$分别代表了东部灯光组、西部灯光组、南部灯光组和北部灯光组亮照射时的照片，
 这些照片色彩丰富，纹理清晰，
 拥有丰富的细节，即是非常微小的纹理、裂缝、划痕、污点也不会丢失，
 这些丰富的细节虽然提供了大量信息，但其中干扰信息过多，无疑增大了缺陷检测的难度；
 $Normal$表示法线主表面图，
-该图能够很好地滤除无用纹理和色彩信息，同时保留由裂缝、划痕等缺陷造成的表面信息。
+该图能够很好地滤除无用纹理和色彩信息，同时保留由裂缝、划痕等缺陷造成的缺陷信息。
 
 \begin{figure}[htbp]
 \centering
@@ -754,11 +755,11 @@ $Normal$表示法线主表面图，
 \end{figure}
 
 为了进一步对比不同数据对分类的影响，
-我们使用canny\cite{canny1983finding}算子提取它们的边缘信息。
-canny算子在提取边缘信息的时候，
+我们使用Canny\cite{canny1983finding}算子提取它们的边缘信息。
+Canny算子在提取边缘信息的时候，
 需要设定两个滞后性阈值$threshold1$和$threshold2$，
 其中二者的较小值的被用于边缘连接，较大值被用来控制强边缘的初始段，
-我们将两个阈值分别设为$100$和$300$，同时设定canny算子中sobel算子的卷积核大小为$3$。
+我们将两个阈值分别设为$100$和$300$，同时设定Canny算子中Sobel算子的卷积核大小为$3$。
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=1.0\linewidth]{figures/butongdengguangcanny.png}
@@ -771,7 +772,7 @@ canny算子在提取边缘信息的时候，
 $Top$和$Normal$边缘相对简单，和真正的边缘比较接近，
 但是$Top$中边缘信息太少，有些缺陷的边缘甚至没有被提取出来，
 而$Normal$中没有这个问题；
-不同方向光源下的照片边缘过多，这些边缘大多由图片的色彩、纹理等造成，和缺陷检测无关。
+不同方向光源下的照片边缘过多，这些边缘大多由图片的色彩、纹理等造成。
 
 
 \begin{figure}[htbp]
@@ -796,16 +797,17 @@ $Top$和$Normal$边缘相对简单，和真正的边缘比较接近，
 \subsection{缺陷检测结果}
 \label{subsection:chuantongjiancejieguo}
 
-本文使用召回率（$recall$，记为$REC$）、
-查准率（$precision$，记为$PRE$）、
-漏检率（ $missing~detection~rate$，记为$MDR$）、
-误检率（$false~detection~rate$，记为$FDR$）
-作为模型评价标准，
+本文使用召回率（$Recall$，记为$REC$）、
+查准率（$Precision$，记为$PRE$）、
+漏检率（ $Missing~Detection~Rate$，记为$MDR$）、
+误检率（$False~Detection~Rate$，记为$FDR$）
+作为模型评价标准。
 其中召回率和漏检率是最重要的标准，误检率往往不是特别重要。
 假设总共用来测试的零件数量为$N$，
 其中正样本即有缺陷的样本数量为$N_p$，
 负样本即没有缺陷的样本个数为$N_n$，
-显然有$N=N_p+N_n$。其中，$N_p$个正样本中分类正确的个数为$TP$，
+显然有$N=N_p+N_n$。
+我们设$N_p$个正样本中分类正确的个数为$TP$，
 分类错误的个数为$FN$，
 $N_n$个负样本中分类正确的个数为$TN$，
 分类错误的个数为$FP$。
@@ -829,14 +831,18 @@ HOG特征作为输入，训练一个强分类器，
 其中黄色矩形标出了检测为缺陷的窗口，
 $(c)$、$(d)$、$(e)$、$(f)$
 分别表示东、西、南、北四组光照图片的检测结果。因为南、北和东、西两组结果非常相似，
-因此我们分别展示两组数据的结果，一组零件包含两个缺陷，结果为图中$(c)$和$(e)$，
-一组零件没有缺陷，结果为图中$(d)$和$(f)$。
-在有缺陷的零件检测结果中，并没有检测出所有缺陷，并且出现大量误检，没有缺陷的零件同样出现大量误检；
+因此我们分别展示两组数据的结果，一组为有缺陷零件，
+零件包含两个缺陷，
+结果为图中$(c)$和$(e)$，
+一组为无缺陷零件，结果为图中$(d)$和$(f)$。
+在有缺陷零件的检测结果中，没有检测出所有缺陷，并且出现大量误检，
+在无缺陷零件的检测结果同样出现大量误检；
 $(b)$表示$(c)$、$(e)$相同零件使用顶部光源拍照图片得到的检测结果，
-结果中误检大大减少，
-但它也没有检测出所有缺陷，我们推测这是由于输入数据过滤掉了太多信息导致；
+虽然结果中误检大大减少，
+但是它也没有检测出所有缺陷，
+我们推测这是由于输入数据过滤掉了太多信息导致；
 $(a)$表示法线图特征的检测结果，
-对于这个零件，它检测出了所有的缺陷信息，并且没有任何误检。
+可以看出，这种检测方式检测出了零件表面的所有缺陷，没有任何误检。
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=1.0\linewidth]{figures/chuantongjiancejieguo.png}
@@ -846,7 +852,8 @@ $(a)$表示法线图特征的检测结果，
 对于本文采用的评价指标结果如表\ref{tab:butongguanzhaojiancejieguo}所示，从表中不难看出，
 使用不同方向光源下的照片作为数据，得到的结果非常差，
 任何一项评价指标都毫无亮点，
-使用顶部灯光组照片得到的结果在$recall$，$precision$上略有起色，但仍难以达到理想效果，
+使用顶部灯光组照片得到的结果在$REC$，
+$PRE$上略有起色，但仍难以达到理想效果，
 而使用我们提取的法线图作为数据，可以得到比较好的结果。
 
 \begin{table}
@@ -869,9 +876,9 @@ $(a)$表示法线图特征的检测结果，
 
 接着，我们分别使用法线图的梯度特征、HOG特征、LBP特征、GLCM特征、Haar-like特征、以及本身的颜色信息作为模型的输入特征，
 在7个子数据集上训练出不同的强分类器，
-并使用级联的方法做检测，
+并使用级联的方法做检测。
 实验结果如表\ref{tab:butongtezhengjieguobiao}所示，
-从中不难看出，使用梯度特征、HOG特征和颜色信息$(RGB)$
+从中不难看出，使用梯度特征、HOG特征和颜色信息（$RGB$）
 得到的结果要明显好于使用LBP特征、GLCM特征和Haar-like特征得到的结果。
 我们认为梯度特征、HOG特征本身能更好的反应图像中像素值的变化情况，
 而在法线图中，像素值的变化反应了零件表面的高低起伏变化情况，和缺陷本身关系密切，
@@ -900,8 +907,8 @@ $(a)$表示法线图特征的检测结果，
 \end{table}
 
 最后，我们还测试了不同分类器的检测速度,从表\ref{tab:tezhengcesudu}可以看出，
-检测速度最快的特征是haar-like特征，
-LBP特征比haar-like特征略慢，
+检测速度最快的特征是Haar-like特征，
+LBP特征比Haar-like特征略慢，
 其次是梯度特征，
 HOG特征需要在梯度特征的基础上进一步加工，速度比梯度特征慢，但并没有慢多少，
 GLCM特征速度最慢，这是由于其特征提取时间复杂度最高，
