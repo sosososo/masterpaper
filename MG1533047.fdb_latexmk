@@ -1,5 +1,5 @@
 # Fdb version 3
-["bibtex MG1533047"] 1527305830 "MG1533047.aux" "MG1533047.bbl" "MG1533047" 1527312352
+["bibtex MG1533047"] 1527305830 "MG1533047.aux" "MG1533047.bbl" "MG1533047" 1527559960
   "./gbt7714-2005.bst" 1514120371 139038 2be6e06aeec4aa8841055d3973e1ac10 ""
   "MG1533047.aux" 1527312335 5156 96e6ab8464e2a1f8003bb91d825e4fd6 ""
   "abstract.aux" 1527312333 2040 d892897a82a5f9e6d9abf12989ec3797 ""
@@ -15,11 +15,11 @@
   (generated)
   "MG1533047.bbl"
   "MG1533047.blg"
-["xdvipdfmx"] 1527312336 "MG1533047.xdv" "MG1533047.pdf" "MG1533047" 1527312352
+["xdvipdfmx"] 1527312336 "MG1533047.xdv" "MG1533047.pdf" "MG1533047" 1527559960
   "MG1533047.xdv" 1527312335 1134396 3973707f98c36f7cbd9a94a9a7198776 "xelatex"
   (generated)
   "MG1533047.pdf"
-["xelatex"] 1527312331 "MG1533047.tex" "MG1533047.xdv" "MG1533047" 1527312352
+["xelatex"] 1527312331 "MG1533047.tex" "MG1533047.xdv" "MG1533047" 1527559960
   "MG1533047.aux" 1527312335 5156 96e6ab8464e2a1f8003bb91d825e4fd6 ""
   "MG1533047.bbl" 1527305831 22205 223640bcf9a2cf5be8319980079ffe1b "bibtex MG1533047"
   "MG1533047.out" 1527312335 4127 fe97d014a96d6787328263fccb31e74c ""
@@ -285,17 +285,17 @@
   "traditional-method.aux" 1527312335 20529 78ddaa754e8463313c82f3b802bd745e ""
   "traditional-method.tex" 1527312326 46766 c8bfeff4d72406e3a1951e08730dc667 ""
   (generated)
-  "normalmap.aux"
-  "MG1533047.aux"
-  "deeplearning-method.aux"
-  "traditional-method.aux"
-  "MG1533047.toc"
-  "MG1533047.out"
   "english-abstract.aux"
-  "thanks.aux"
   "abstract.aux"
   "MG1533047.xdv"
-  "summary.aux"
+  "thanks.aux"
   "introduction.aux"
-  "MG1533047.log"
+  "normalmap.aux"
+  "MG1533047.out"
   "resume.aux"
+  "MG1533047.toc"
+  "MG1533047.aux"
+  "MG1533047.log"
+  "deeplearning-method.aux"
+  "summary.aux"
+  "traditional-method.aux"
