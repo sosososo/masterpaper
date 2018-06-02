@@ -9,18 +9,18 @@ The first is to extract the artificial features designed in the image and the se
 There are two main disadvantages in this method, 
 one is the difficulty of feature engineering, 
 the other is that the performance of the classification model is susceptible to lighting, noise, texture of the part and other conditions.
-With the vigorous development of deep learning, more and more different detection models have been developed to detect objects, which have achieved ideal results in many fields, especially in competitions. 
+With the vigorous development of deep learning, more and more different detection models is developed to detect objects, which have achieved ideal results in many fields, especially in competitions. 
 However, those models always demand a mountain of samples and
 are not good at detecting little objects while most of defections are very small.
 
-To solve this problem, this paper takes the normal map as the input of defect detection for the first time. We do the defect detecion with a traditional method combined SVM, Adaboost and Cascade and a state-of-the-art performance is acheived. We also take the normal map as input as convolutional neural network, and compare the results with traditional method's .
+To solve this problem, this paper takes the normal map as the input of defect detection for the first time. We do the defect detection with a traditional method combined SVM, Adaboost and Cascade and a state-of-the-art performance is acheived. We also take the normal map as input as convolutional neural network, and compare the results with traditional method's.
 The main work and innovation of this article could be found as follows:
 
 \begin{enumerate}
 \item We propose a method to acquire the normal map of parts' surface and  design an equipment to acquire the method's inputs. 
-This equipment includes a camera,LED light bars, a stepper motor and so many other components. 
-All components are constituted into five models so that we could get required information.
-And we put forward a method to compute the normal maps with the inputs collected by our equipment metioned above.
+This equipment includes a camera, LED light bars, a stepper motor and so many other components. 
+All components are constituted into five models so that we could get required information,
+and we put forward a method to compute the normal maps with the inputs collected by our equipment mentioned above.
 To make up the imperfection of the capture equipment,
 we add some corrections and enhancements before the normal map's computation.
 Those are
